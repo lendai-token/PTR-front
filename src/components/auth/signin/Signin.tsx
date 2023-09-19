@@ -6,9 +6,8 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { OutlinedInput, InputLabel, InputAdornment, IconButton, Divider, Button, ButtonProps  } from '@mui/material';
+import { FormControl, FormControlLabel, OutlinedInput, InputLabel, InputAdornment, IconButton, Divider, Button, ButtonProps, Checkbox } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import FormControl from '@mui/material/FormControl';
 import { styled } from '@mui/material/styles';
 import  googleIcon  from "../../../assets/imgs/signup/google-icon.svg";
 import  facebookIcon  from "../../../assets/imgs/signup/facebook-icon.svg";
@@ -26,7 +25,7 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
 }));
 
 
-const Signup = () => {
+const Signin = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
@@ -67,10 +66,10 @@ const Signup = () => {
                                   marginRight: 5,
                               }}>
                                   <Typography component="h1" variant="h5" style={{fontSize: '12.8px'}}>
-                                      LET'S GET STARTED
+                                      WELCOME BACK
                                   </Typography>
                                   <Typography component="h1" variant="h5" style={{fontSize: '25px'}}>
-                                      Create an Account
+                                      Log In to your Account
                                   </Typography>
                               </Box>
                           
@@ -85,18 +84,6 @@ const Signup = () => {
                               >
                                   <Box component="form" noValidate onSubmit={handleSubmit}>
                                       <Grid container spacing={2}>
-                                        <Grid item xs={12} sm={12}>
-                                          <TextField
-                                            autoComplete="given-name"
-                                            name="yourName"
-                                            id="yourName"
-                                            label="Your Name"
-                                            placeholder="Johnson Doe"
-                                            required
-                                            fullWidth
-                                            autoFocus
-                                          />
-                                        </Grid>
                                         <Grid item xs={12}>
                                           <TextField
                                             autoComplete="email"
@@ -136,13 +123,24 @@ const Signup = () => {
                                           </FormControl>
                                         </Grid>
                                       </Grid>
+                                      <Box sx={{display: 'flex', justifyContent:'space-between', alignItems: 'center', mt:2}}>
+                                        <FormControlLabel
+                                          control={<Checkbox value="remember" color="primary" />}
+                                          label="Remember me"
+                                        />
+                                        <Typography>
+                                          <Link href="#" variant="body2" sx={{fontSize: '16px'}}>
+                                            Forgot Password
+                                          </Link>
+                                        </Typography>
+                                      </Box>
                                       <ColorButton
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2 , height: '56px'}}
+                                        sx={{ mt: 2, mb: 2 , height: '56px'}}
                                       >
-                                        GET STARTED
+                                        CONTINUE
                                       </ColorButton>
                                       <Divider>Or</Divider>
                                       <Box sx={{ width:'100%', mt:'22px'}}>
@@ -177,9 +175,9 @@ const Signup = () => {
                                       <Box sx={{mt: '48px', mb: '65px'}}>
                                         <Grid container justifyContent="center">
                                           <Grid item>
-                                              ALREADY HAVE A PROFILE?&nbsp;
+                                              New User&nbsp;
                                               <Link href="#" variant="body2">
-                                                LOGIN HERE
+                                                SIGN UP HERE
                                               </Link>
                                           </Grid>
                                         </Grid>
@@ -195,4 +193,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Signin;

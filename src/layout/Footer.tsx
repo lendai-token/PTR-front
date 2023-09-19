@@ -24,6 +24,12 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const invisiblePathList = [
     "/signin",
+    "/signup",
+    "/create-user/step1",
+    "/create-user/step2",
+    "/create-user/step3",
+    "/create-user/step4",
+    "/create-user/step5",
 ]
 
 const privacyItems = [

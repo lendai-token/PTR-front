@@ -6,17 +6,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
 import { Home } from "./components/home";
-import { Size } from "./components/size";
-import { Confirmation } from "./components/confirmation";
-import { MoveDate } from "./components/date";
-import { DestCity } from "./components/destcity";
-import { Name } from "./components/name";
-import { Email } from "./components/email";
-import { Phone } from "./components/phone";
-import { Admin } from "./components/admin";
-import { Login } from "./components/auth/login";
-import { ProtectedRoute } from "./components/common";
+import { Signin } from "./components/auth/signin";
 import { Signup } from "./components/auth/signup";
+import { CreateUserOne } from "./components/create_user_one";
+import { CreateUserTwo } from "./components/create_user_two";
+import { CreateUserThree } from "./components/create_user_three";
+import { CreateUserFour } from "./components/create_user_four";
 
 function App() {
   return (
@@ -26,23 +21,12 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/signin" element={<Signup />} />
-            <Route path="/size" element={<Size />} />
-            <Route path="/date" element={<MoveDate />} />
-            <Route path="/destination-city" element={<DestCity />} />
-            <Route path="/name" element={<Name />} />
-            <Route path="/email" element={<Email />} />
-            <Route path="/phone" element={<Phone />} />
-            <Route path="/confirmation" element={<Confirmation />} />
-            <Route
-              path="/admin"
-              element={
-                <ProtectedRoute>
-                  <Admin />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/login" element={<Login />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/create-user/step1" element={<CreateUserOne />} />
+            <Route path="/create-user/step2" element={<CreateUserTwo />} />
+            <Route path="/create-user/step3" element={<CreateUserThree />} />
+            <Route path="/create-user/step4" element={<CreateUserFour />} />
           </Routes>
           <Footer />
         </Router>
