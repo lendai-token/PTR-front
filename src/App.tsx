@@ -12,6 +12,9 @@ import { CreateUserOne } from "./components/create_user_one";
 import { CreateUserTwo } from "./components/create_user_two";
 import { CreateUserThree } from "./components/create_user_three";
 import { CreateUserFour } from "./components/create_user_four";
+import { CreateUserFive } from "./components/create_user_five";
+import { CreateUserFinal } from "./components/create_user_final";
+import { Pricing } from "./components/pricing";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
             <Route path="/create-user/step2" element={<CreateUserTwo />} />
             <Route path="/create-user/step3" element={<CreateUserThree />} />
             <Route path="/create-user/step4" element={<CreateUserFour />} />
+            <Route path="/create-user/step5" element={<CreateUserFive />} />
+            <Route path="/create-user/final" element={<CreateUserFinal />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
           <Footer />
         </Router>

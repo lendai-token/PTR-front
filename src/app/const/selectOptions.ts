@@ -18,7 +18,7 @@ const genders = [
         text:"Female", 
         value:"female"
       }
-]
+];
 
 const positions = [
   {
@@ -101,10 +101,68 @@ const positions = [
     text:"Spin/Cycling Instructor", 
     status:"normal"
   },
-]
+];
+
+const ratings = [
+  {
+    text: "Leadership Skills"
+  },
+  {
+    text: "Ability to Work in a Team"
+  },
+  {
+    text: "Communication Skills: Written"
+  },
+  {
+    text: "Communication Skills: Verbal"
+  },
+  {
+    text: "Problem Solving Skills "
+  },
+  {
+    text: "Strong Work Ethic"
+  },
+  {
+    text: "Analytical / Quatitative Skills"
+  },
+  {
+    text: "Technical Skills"
+  },
+  {
+    text: "Initiative"
+  },
+  {
+    text: "Computer Skills"
+  },
+  {
+    text: "Flexibility/ Adaptability"
+  },
+  {
+    text: "Interpersonal Skills"
+  },
+  {
+    text: "Detail-Oriented"
+  },
+  {
+    text: "Organizational Ability"
+  },
+  {
+    text: "Strategic Planning Skills"
+  },
+  {
+    text: "Friendy / Outgoing Personality"
+  },
+  {
+    text: "Entrepreneurial Skills/Risk-Taker"
+  },
+  {
+    text: "Tactfulness"
+  },
+];
 
 export {
     salutations,
     genders,
     positions,
+    ratings,
 }

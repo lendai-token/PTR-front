@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useAppSelector } from "../../app/hooks";
 import { selectCityFrom } from "../home/homeSlice";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,13 +8,11 @@ import { useAppDispatch } from "../../app/hooks";
 import url from "../../app/const/url";
 
 import "./style.scss";
-import StyledTextField from "../common/StyledTextField";
-import StyledButton from "../common/StyledButton";
-import { positions } from "../../app/const/selectOptions";
-import StyledTextArea from "../common/StyledTextArea";
-import pdfOnly from "../../assets/imgs/create-user/pdf-only.svg";
+import ratingImage from "../../assets/imgs/create-user/rating-image.svg";
+import StyledRatingBar from "../common/StyledRatingBar";
+import { ratings } from "../../app/const/selectOptions";
 
-const CreateUserFour = () => {
+const CreateUserFive = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     const lastActivityDateTime = new Date();
@@ -60,12 +58,12 @@ const CreateUserFour = () => {
         </div>
         {/* section-progress */}
         <div className="text-center">
-          <div className="progress-ruler mx-[260px] pt-[22px] relative mt-[22px] mb-[92px]">
+          <div className="progress-ruler mx-[260px] pt-[22px] relative mt-[22px] mb-[180px]">
             <div className=" w-[99%] m-auto flex justify-between items-center">
               <div className="bg-purple-200 h-[6px] w-[25%]"></div>
               <div className="bg-purple-200 h-[6px] w-[25%]"></div>
               <div className="bg-purple-200 h-[6px] w-[25%]"></div>
-              <div className="bg-purple-300 h-[6px] w-[25%]"></div>
+              <div className="bg-purple-200 h-[6px] w-[25%]"></div>
             </div>
             <div className="dots-part flex justify-between absolute w-full top-[8px]">
               <div>
@@ -96,15 +94,15 @@ const CreateUserFour = () => {
                 <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center">
                   <span className="text-[14px] font-bold text-white">4</span>
                 </div>
-                <div className="absolute -translate-x-[9%] translate-y-[10px] font-bold text-[20px]">
+                <div className="absolute -translate-x-[9%] translate-y-[10px] font-bold">
                   Social
                 </div>
               </div>
               <div>
-                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-300 flex items-center justify-center">
+                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center">
                   <span className="text-[14px] font-bold text-white">5</span>
                 </div>
-                <div className="absolute -translate-x-[10%] translate-y-[10px] font-bold">
+                <div className="absolute -translate-x-[10%] translate-y-[10px] font-bold text-[20px]">
                   Rating
                 </div>
               </div>
@@ -112,68 +110,47 @@ const CreateUserFour = () => {
             </div>
           </div>
         </div>
-        {/* section-input */}
-        <div className="max-w-[810px] mx-auto">
-          <div className="text-[20px] font-bold text-black-300">
-            Social Media
-          </div>
-          <div className="text-[14px] text-grey-800">
-            Link to your social media profiles that highlight your experience, expertise, and skills.
-          </div>
-          <div className="grid grid-cols-6 gap-4 mt-[16px]">
+        <div className="px-[300px]">
+          {/* section-description */}
+          <div className="grid grid-cols-4 gap-8 relative">
             <div className="col-span-3">
-              <StyledTextField label="LinkedIn" placeholder="www.Linkedin.com/..." id="profile-linkedin"/>
+              <div className="text-[20px] font-bold text-black-300 mb-[8px]">
+                What is a personal rating scale?
+              </div>
+              <div className="text-[14px] text-grey-800">
+                It is a tool that future employers will use to evaluate and rate an individual's personal attributes, skills, and characteristics. It is designed to assess various qualities and competencies that are not easily quantifiable through traditional methods like academic grades or work experience. The following scale includes subjective criteria that can be essential in both personal and professional settings.
+              </div>
             </div>
-            <div className="col-span-3">
-              <StyledTextField label="Instagram" placeholder="www.Instagram.com/...." id="profile-instagram"/>
-            </div>
-            <div className="col-span-3">
-              <StyledTextField label="Twitter" placeholder="www.Twitter.com/..." id="profile-twitter"/>
-            </div>
-            <div className="col-span-3">
-              <StyledTextField label="TikTok" placeholder="www.tiktok.com/..." id="profile-tiktok"/>
+            <div className="col-span-1">
+              <img src={ratingImage} alt="rating-image" className="absolute -top-[120px]" />
             </div>
           </div>
 
-          <div className="text-[20px] font-bold text-black-300 mt-[18px]">
-            Profile Summary
-          </div>
-          <div className="text-[14px] text-grey-800 flex justify-between items-center">
-            <span>Keep your profile short and to the point to keep the hiring manager engaged and interested</span>
-            <span>88/100</span>
-          </div>
-          <div className="mt-[3px]">
-            <StyledTextArea />
-          </div>
-        </div>
-        {/* section upload resume */}
-        <div className="max-w-[810px] mx-auto mt-[42px] text-center relative">
-          <div className="grid grid-cols-6 gap-[18px]">
-            <div className="col-span-3">
-              <div className="grid grid-cols-9">
-                <div className="col-span-5"></div>
-                <div className="col-span-4">
-                  <StyledButton text="Upload New Resume" status="contrast-active" />
-                </div>
-              </div>
+          <div className="mt-[8px]">
+            <div className="text-[20px] font-bold text-black-300 mb-[8px]">
+              What should you do when answering the following items?
             </div>
-            <div className="col-span-3">
-              <div className="grid grid-cols-9">
-                <div className="col-span-4">
-                  <StyledButton text="View Your Resume" status="contrast-normal" />
-                </div>
-                <div className="col-span-5"></div>
-              </div>
+            <div className="text-[14px] text-grey-800">
+              Be honest. The importance of the following personal rating scale for future employers lies in its ability to provide a more comprehensive and holistic view of your specific suitability for a particular job or work environment.
             </div>
           </div>
-          <div className="absolute top-[14px] right-0 flex items-center">
-            <span><img src={pdfOnly} alt="pdf-only-icon" /></span><span className="text-grey-900 pl-[5px]">PDF format only.</span>
+          {/* section rating stars */}
+          <div className="mt-[20px] grid grid-cols-6 gap-4">
+            {
+              ratings.map((item)=>{
+                return (
+                  <div className="col-span-2">
+                    <StyledRatingBar text={item.text}/>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
         {/* section-pagination */}
         <div className="mt-[50px] text-center pb-[59px]">
-          <span className="text-grey-800 text-[14px]"><Link to="/create-user/step3">&lt; PREVIOUS</Link>&nbsp;/&nbsp;</span>
-          <span className="text-purple-200 text-[14px]"><Link to="/create-user/step5">NEXT &gt;</Link></span>
+          <span className="text-grey-800 text-[14px]"><Link to="/create-user/step4">&lt; PREVIOUS</Link>&nbsp;/&nbsp;</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/final">NEXT &gt;</Link></span>
         </div>
       </div>
     );
@@ -181,4 +158,4 @@ const CreateUserFour = () => {
   return <>{content}</>;
 };
 
-export default CreateUserFour;
+export default CreateUserFive;

@@ -25,11 +25,6 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const invisiblePathList = [
     "/signin",
     "/signup",
-    "/create-user/step1",
-    "/create-user/step2",
-    "/create-user/step3",
-    "/create-user/step4",
-    "/create-user/step5",
 ]
 
 const privacyItems = [
@@ -152,8 +147,8 @@ const Footer = () => {
     if (isDesktop) {
         content = 
         !invisiblePathList.includes(location.pathname) ? (
-            <div className="w-full absolute bottom-0 bg-white border-t border-grey-600">
-                <div className="bg-grey-100 px-30 px-[165px]">
+            <div className="w-full bg-white border-t border-grey-600">
+                <div className="bg-grey-100 px-30 px-[165px] relative">
                     <div className="absolute right-[215px] top-[85px]">
                         <span className='pr-[14px]'><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'facebook-f', style: 'brands'})} /></span>
                         <span className='pr-[9px]'><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'twitter', style: 'brands'})} /> </span>
@@ -275,201 +270,10 @@ const Footer = () => {
         ) : <div></div>
     } else if (isTablet) {
         content = 
-        <div className="w-full absolute bottom-0">
-            {
-                !invisiblePathList.includes(location.pathname) ? (
-                    <div className="bg-background">
-                        <div className="text-blue-300 text-[17px] font-semibold mb-[30px] text-center">
-                            Nearly 10 million competitive rates provided by companies like
-                        </div>
-                        <div className="flex items-center justify-between px-[40px] pb-[30px]">
-                            <img src={Allied} alt="allied-img" width={90} />
-                            <img src={United} alt="united-img" width={90} />
-                            <img src={National} alt="national-img" width={90} />
-                            <img src={NorthAmerican} alt="NA-img" width={90} />
-                            <img src={Graebel} alt="graebel-img" width={90} />
-                        </div>
-                    </div>
-                ) : <div></div>
-            }
-            
-            <div className="flex items-center justify-center bg-grey-100 px-30 px-[20px] py-[10px]">
-                <div className="text-base text-grey-300">
-                    <p className="text-center text-[12px] font-bold">© 2023 MoveMater</p>
-                    <p className="text-center text-[12px] font-bold">
-                        <span className="cursor-pointer hover:underline">
-                            <Link target='_blank' to={'https://app.contact.liveswitch.com/form#639a39aa-dc02-4277-966a-76cc23a9cabf'}>
-                            Self Video Walkthrough
-                            </Link>
-                        </span>
-                        <span>
-                            &nbsp;|&nbsp; 
-                        </span>
-                        <span className="cursor-pointer hover:underline" onClick={handleClickOpenPrivacy("paper")}>
-                            Privacy Policy
-                        </span>
-                        <span>
-                            &nbsp;|&nbsp; 
-                        </span>
-                        <span className="cursor-pointer hover:underline" onClick={handleClickOpenTerm("paper")}>
-                            Terms And Conditions
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div>
-                <Dialog
-                    open={openPrivacy}
-                    onClose={handleClosePrivacy}
-                    scroll={scroll}
-                    aria-labelledby="scroll-dialog-title"
-                    aria-describedby="scroll-dialog-description"
-                >
-                    <DialogTitle id="scroll-dialog-title">Privacy Policy</DialogTitle>
-                    <DialogContent dividers={scroll === 'paper'}>
-                    <DialogContentText
-                        id="scroll-dialog-description"
-                        ref={descriptionElementRef}
-                        tabIndex={-1}
-                    >
-                        {
-                            privacyItems.map((item, index) => {
-                                return (
-                                    <div key={index}>
-                                        <p className="font-semibold mb-1">{item.title}</p>
-                                        <p className="" dangerouslySetInnerHTML={{__html: item.desc}} />
-                                    </div>
-                                )
-                            })
-                        }
-                    </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                    <Button onClick={handleClosePrivacy}>Close</Button>
-                    </DialogActions>
-                </Dialog>
-                <Dialog
-                    open={openTerm}
-                    onClose={handleCloseTerm}
-                    scroll={scroll}
-                    aria-labelledby="scroll-dialog-title"
-                    aria-describedby="scroll-dialog-description"
-                >
-                    <DialogTitle id="scroll-dialog-title">Terms and Conditions</DialogTitle>
-                    <DialogContent dividers={scroll === 'paper'}>
-                    <DialogContentText
-                        id="scroll-dialog-description"
-                        ref={descriptionElementRef}
-                        tabIndex={-1}
-                    >
-                        {
-                            termItems.map((item: any, index) => {
-                                return (
-                                    <div key={index}>
-                                        <p className="font-semibold mb-1">{item.title}</p>
-                                        <p className="" dangerouslySetInnerHTML={{__html: item.desc}} />
-                                    </div>
-                                )
-                            })
-                        }
-                    </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                    <Button onClick={handleCloseTerm}>Close</Button>
-                    </DialogActions>
-                </Dialog>
-            </div>
-        </div>
+        <div></div>
     } else if (isMobile) {
         content = 
-        <div className="w-full absolute bottom-0">
-            <div className="flex items-center justify-center bg-grey-100 px-30 px-[20px] py-[10px]">
-                <div className="text-base text-grey-300">
-                    <p className="text-center text-[12px] font-bold">© 2023 MoveMater</p>
-                    <p className="text-center text-[12px] font-bold">
-                        <span className="cursor-pointer hover:underline">
-                            <Link target='_blank' to={'https://app.contact.liveswitch.com/form#639a39aa-dc02-4277-966a-76cc23a9cabf'}>
-                            Self Video Walkthrough
-                            </Link>
-                        </span>
-                        <span>
-                            &nbsp;|&nbsp; 
-                        </span>
-                        <span className="cursor-pointer hover:underline" onClick={handleClickOpenPrivacy("paper")}>
-                            Privacy Policy
-                        </span>
-                        <span>
-                            &nbsp;|&nbsp; 
-                        </span>
-                        <span className="cursor-pointer hover:underline" onClick={handleClickOpenTerm("paper")}>
-                            Terms And Conditions
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div>
-                <Dialog
-                    open={openPrivacy}
-                    onClose={handleClosePrivacy}
-                    scroll={scroll}
-                    aria-labelledby="scroll-dialog-title"
-                    aria-describedby="scroll-dialog-description"
-                >
-                    <DialogTitle id="scroll-dialog-title">Privacy Policy</DialogTitle>
-                    <DialogContent dividers={scroll === 'paper'}>
-                    <DialogContentText
-                        id="scroll-dialog-description"
-                        ref={descriptionElementRef}
-                        tabIndex={-1}
-                    >
-                        {
-                            privacyItems.map((item, index) => {
-                                return (
-                                    <div key={index}>
-                                        <p className="font-semibold mb-1">{item.title}</p>
-                                        <p className="" dangerouslySetInnerHTML={{__html: item.desc}} />
-                                    </div>
-                                )
-                            })
-                        }
-                    </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                    <Button onClick={handleClosePrivacy}>Close</Button>
-                    </DialogActions>
-                </Dialog>
-                <Dialog
-                    open={openTerm}
-                    onClose={handleCloseTerm}
-                    scroll={scroll}
-                    aria-labelledby="scroll-dialog-title"
-                    aria-describedby="scroll-dialog-description"
-                >
-                    <DialogTitle id="scroll-dialog-title">Terms and Conditions</DialogTitle>
-                    <DialogContent dividers={scroll === 'paper'}>
-                    <DialogContentText
-                        id="scroll-dialog-description"
-                        ref={descriptionElementRef}
-                        tabIndex={-1}
-                    >
-                        {
-                            termItems.map((item: any, index) => {
-                                return (
-                                    <div key={index}>
-                                        <p className="font-semibold mb-1">{item.title}</p>
-                                        <p className="" dangerouslySetInnerHTML={{__html: item.desc}} />
-                                    </div>
-                                )
-                            })
-                        }
-                    </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                    <Button onClick={handleCloseTerm}>Close</Button>
-                    </DialogActions>
-                </Dialog>
-            </div>
-        </div>
+        <div></div>
     }
     return (
         <>

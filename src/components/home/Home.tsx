@@ -56,7 +56,7 @@ const Home = () => {
   const handleClick = () => {
     if (cityFrom === "") {
       setInvisibleCityFromErr(false);
-    } else {
+    } else {  
       setInvisibleCityFromErr(true);
       navigate("/destination-city");
     }
@@ -73,31 +73,25 @@ const Home = () => {
               <source src="./banner-movie.mp4" type='video/mp4' />
             </video>
             <div className="video-overlay"></div>
-            <div className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 italic text-[45px] text-white font-bold w-full">
+            <div className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 italic text-[58px] text-white font-bold w-full">
               <div className="relative">
                 <div>
                   <p>DISCOVER YOUR PERFECT JOB</p>
                   <p>AT THE IDEAL FITNESS FACILITY</p>
                 </div>
-                <div className="absolute w-full mt-[56px]">
-                  <SearchBar />
+                <div className="absolute w-full mt-[25px]">
+                  <SearchBar/>
                 </div>
               </div>
             </div>
           </div>
-          {/* create profile */}
-          <div className="section-create-profile h-[84px] flex justify-center items-center bg-blue-200 text-blue-300">
-            <a href="#" className="hover:underline text-[21px]">
-              CREATE YOUR PROFILE – Capture the attention of your future employer
-            </a>
-          </div>
           {/* section activities */}
           <div className="section-activities bg-grey-400">
-            <div className="pt-[142px] text-[30px]">
+            <div className="pt-[170px] text-[40px]">
               <span className="text-blue-100 font-bold">Explore&nbsp;</span>
               <span className="text-black-100 font-bold">activity images on PTRoster</span>
             </div>
-            <div className="text-black-200 text-[15px] pt-[14px]">
+            <div className="text-black-200 text-[25px] pt-[14px]">
               Looking for professional part-time, freelance jobs.
             </div>
             <div className="pt-[50px] pb-[86px]">
@@ -117,11 +111,11 @@ const Home = () => {
         </div>
         {/* section trainers */}
         <div className="section-trainers bg-white w-full pt-[50px] pb-[62px]">
-          <div className="text-[29px] font-bold px-[40px] pb-[14px]">
+          <div className="text-[40px] font-bold px-[40px] pb-[14px] text-center">
             <span className="text-blue-100">Trainers&nbsp;</span>
             <span className="text-black-100">are full of passion and enthusiasm</span>
           </div>
-          <div className="text-[15px] text-black-200 px-[40px] pb-[53px]">
+          <div className="text-[25px] text-black-200 px-[40px] pb-[53px] text-center">
             We have top coaches ready to help you from all over the world wherever you are.
           </div>
           <div className="px-[25px]">
@@ -130,66 +124,78 @@ const Home = () => {
         </div>
         {/* section coach */}
         <div className="w-full bg-white">
-          <div className="text-center pb-[14px] font-bold">
-            <span className="text-black-100 text-[27px]">The smartest choice for&nbsp;</span>
-            <span className="text-blue-100 text-[26px]">Coaches like you</span>
+          <div className="text-center pb-[14px] font-bold text-[30px]">
+            <span className="text-black-100">The smartest choice for&nbsp;</span>
+            <span className="text-blue-100">Coaches like you</span>
           </div>
           <div className="text-center pb-[59px] relative">
-            <span className="text-[15px] text-black-200">Whether you're looking for sports jobs, you'll find great jobs or coaches here</span>
-            <img src={coachFrame} alt="coach-frame" className="absolute right-[100px] top-[0px]"/>
+            <span className="text-[25px] text-black-200">Whether you're looking for sports jobs, you'll find great jobs or coaches here</span>
+            <img src={coachFrame} alt="coach-frame" className="absolute right-[100px] top-[75px]"/>
           </div>
           <div className="px-[250px] pb-[100px]">
-            <div className="text-black-100 text-[19px] pb-[6px] font-bold">
-              Jobs from around the world
-            </div>
-            <div className="text-black-200 text-[15px] pb-[29px]">
-              This is draft content written to serve as a template for a website,<br />not official content. Correct content will be responded to later.
-            </div>
-            <div className="text-black-100 text-[19px] pb-[6px] font-bold">
-              Top trainers
-            </div>
-            <div className="text-black-200 text-[15px] pb-[29px]">
-              This is draft content written to serve as a template for a website,<br />not official content. Correct content will be responded to later.
-            </div>
-            <div className="text-black-100 text-[19px] pb-[6px] font-bold">
-              Commitment to results exceeding expectations
-            </div>
-            <div className="text-black-200 text-[15px] pb-[29px]">
-              This is draft content written to serve as a template for a website,<br />not official content. Correct content will be responded to later.
-            </div>
-            <div className="text-black-100 text-[19px] pb-[6px] font-bold">
-              Freedom without geographical distance
-            </div>
-            <div className="text-black-200 text-[15px] pb-[29px]">
-              This is draft content written to serve as a template for a website,<br />not official content. Correct content will be responded to later.
+            <div className="w-1/2">
+              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                Jobs from around the world
+              </div>
+              <div className="text-black-200 text-[17px] pb-[29px]">
+                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+              </div>
+              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                Top trainers
+              </div>
+              <div className="text-black-200 text-[17px] pb-[29px]">
+                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+              </div>
+              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                Commitment to results exceeding expectations
+              </div>
+              <div className="text-black-200 text-[17px] pb-[29px]">
+                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+              </div>
+              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                Freedom without geographical distance
+              </div>
+              <div className="text-black-200 text-[17px] pb-[29px]">
+                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+              </div>
+
             </div>
           </div>
         </div>
         {/* section icons */}
         <div className="w-full section-icons-frame pb-[132px] ">
-          <img src={iconsFrame} alt="icons-frame" className="absolute right-[80px]" />
+          <img src={iconsFrame} alt="icons-frame" className="absolute right-[80px] pt-[45px]" />
           <div className="px-[180px] pt-[118px] pb-[6px]">
-            <div className="text-white text-[23px]">
-              Sign up to find opportunities to become our coach
+            <div className="w-1/2">
+              <div className="text-white text-[40px]">
+                <span>Sign up to find opportunities</span>
+                <span><br />to <span className="text-blue-400">become our coach</span></span>
+              </div>
+              <div className="pb-[29px] text-white text-[25px]">
+                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+              </div>
+              <button className="text-[14px] text-black-100 px-[30px] py-[10px] border border-white rounded-[8px] bg-grey-500">
+                <Link to="#" >Explore icons</Link>
+              </button>
             </div>
-            <div className="pb-[29px] text-white text-[15px]">
-              This is draft content written to serve as a template for a website, not<br />official content. Correct content will be responded to later.
-            </div>
-            <button className="text-[14px] text-black-100 px-[30px] py-[10px] border border-white rounded-[8px] bg-grey-500">Explore icons</button>
           </div>
         </div>
         {/* section community */}
-        <div className="w-full pt-[141px] pb-[450px] bg-white relative">
-          <img src={communityFrame} alt="community-frame" className="absolute right-[112px] top-[48px]"/>
-          <div className="text-[26px] pb-[19px] font-bold px-[171px]">
+        <div className="w-full pt-[141px] pb-[220px] bg-white relative">
+          <img src={communityFrame} alt="community-frame" className="absolute right-[112px] top-[150px]"/>
+          <div className="text-[40px] pb-[19px] font-bold px-[171px]">
             <span className="text-black">Join the PTRoster&nbsp;</span>
-            <span className="text-blue-100">community of Fitness trainers</span>
-          </div>
-          <div className="text-black text-[15px] pb-[34px] px-[180px]">
-            This is draft content written to serve as a template for a website,<br />not official content. Correct content will be responded to later.
+            <span className="text-blue-100"><br />community of Fitness trainers</span>
           </div>
           <div className="px-[180px]">
-            <button className="text-[14px] text-white px-[30px] py-[10px] border border-white rounded-[3px] bg-blue-100">Join community</button>
+            <div className="text-black text-[25px] pb-[34px] w-1/2">
+              This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+            </div>
+          </div>
+          <div className="px-[180px]">
+            <button className="text-[14px] text-white px-[30px] py-[10px] border border-white rounded-[3px] bg-blue-100">
+              <Link to="#" >Join community</Link>
+            </button>
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@ import url from "../../app/const/url";
 import "./style.scss";
 import StyledTextField from "../common/StyledTextField";
 import StyledSelect from "../common/StyledSelect";
-import { Box } from "@mui/system";
 import { salutations, genders } from "../../app/const/selectOptions";
 
 const CreateUserOne = () => {
@@ -175,7 +174,7 @@ const CreateUserOne = () => {
         {/* section-pagination */}
         <div className="mt-[50px] text-center pb-[59px]">
           <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
-          <span className="text-purple-200 text-[14px]">NEXT &gt;</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/step2">NEXT &gt;</Link></span>
         </div>
       </div>
     );

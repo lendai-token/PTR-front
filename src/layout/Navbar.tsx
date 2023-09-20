@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo from '../assets/imgs/logo.png';
 import { useScreenSize } from '../app/hooks';
 import { useLocation } from 'react-router-dom';
@@ -23,8 +23,8 @@ const Navbar = () => {
                 </div>
                 <div className="space-x-4">
                     <Link to="#" className='text-base text-blue-100 bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] hover:text-white hover:bg-blue-100'>Post a Job</Link>
-                    <Link to="#" className='text-base hover:text-blue-100 hover:bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] text-white bg-blue-100'>Sign in</Link>
-                    <Link to="#" className='text-base text-blue-100 bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] hover:text-white hover:bg-blue-100'>Sign up</Link>
+                    <Link to="/signin" className='text-base hover:text-blue-100 hover:bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] text-white bg-blue-100'>Sign in</Link>
+                    <Link to="/signup" className='text-base text-blue-100 bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] hover:text-white hover:bg-blue-100'>Sign up</Link>
                 </div>
             </div>
         ) : (

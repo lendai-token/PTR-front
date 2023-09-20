@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import './style.scss';
@@ -130,7 +131,7 @@ const SearchBar = () => {
                             </svg>
                         </div>
                         <button 
-                            className="text-[12px] text-grey-300 p-4"
+                            className="text-[20px] text-grey-300 p-4 font-normal"
                             onClick={() => {
                                 setVisibleJob(true);
                             }}
@@ -139,7 +140,7 @@ const SearchBar = () => {
                         </button>
                     </div>
                     <div className="col-span-3 relative">
-                        <input type="text" className="absolute top-2/4 search-input-bar" placeholder="Search all job" />
+                        <input type="text" className="absolute top-2/4 search-input-bar text-[20px] font-normal" placeholder="Search all job" />
                         <span className="enlarger-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.65063 0C13.4205 0 17.3004 3.87986 17.3004 8.64974C17.3004 10.9002 16.4367 12.9527 15.0235 14.4931L17.8044 17.2681C18.0646 17.5284 18.0655 17.9494 17.8053 18.2097C17.6756 18.3411 17.5041 18.406 17.3336 18.406C17.1639 18.406 16.9934 18.3411 16.8628 18.2114L14.0484 15.4049C12.5679 16.5905 10.6906 17.3004 8.65063 17.3004C3.88075 17.3004 0 13.4196 0 8.64974C0 3.87986 3.88075 0 8.65063 0ZM8.65063 1.33237C4.61533 1.33237 1.33237 4.61444 1.33237 8.64974C1.33237 12.685 4.61533 15.968 8.65063 15.968C12.685 15.968 15.968 12.685 15.968 8.64974C15.968 4.61444 12.685 1.33237 8.65063 1.33237Z" fill="black"/>
@@ -147,10 +148,10 @@ const SearchBar = () => {
                         </span>
                     </div>
                 </div>
-                <div className="col-span-1 pl-4 text-[14px] text-black relative">
+                <div className="col-span-1 pl-4 text-[20px] text-black relative">
                     <div className="h-full">
                         <button 
-                            className="text-[14px] text-black p-4 bg-white w-full rounded-[3px] h-full flex justify-center items-center"
+                            className="text-[20px] text-grey-300 font-normal p-4 bg-white w-full rounded-[3px] h-[54px] flex justify-center items-center"
                             onClick={() => {
                                 setVisibleLocation(true);
                             }}
@@ -214,8 +215,14 @@ const SearchBar = () => {
                     </div>
                 </div>
             </div>
-            
-            
+            <div className="absolute left-2/4 top-[50px] -translate-x-2/4 w-full">
+                <span className="text-[30px] font-normal">Capture the attention of your future employer - </span>
+                <span>
+                    <Link to="/signup" className="hover:underline text-[30px] font-bold">
+                        CREATE YOUR PROFILE
+                    </Link>
+                </span>
+            </div>
         </div>
     )
 }
