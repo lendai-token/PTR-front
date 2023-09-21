@@ -216,9 +216,9 @@ const SearchBar = () => {
                 </div>
             </div>
             <div className="absolute left-2/4 top-[50px] -translate-x-2/4 w-full">
-                <span className="text-[30px] font-normal">Capture the attention of your future employer - </span>
+                <span className="text-[30px] font-normal no-italic">Capture the attention of your future employer - </span>
                 <span>
-                    <Link to="/signup" className="hover:underline text-[30px] font-bold">
+                    <Link to="/signup" className="underline hover:no-underline text-[30px] font-bold no-italic">
                         CREATE YOUR PROFILE
                     </Link>
                 </span>

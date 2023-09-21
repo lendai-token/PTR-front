@@ -148,7 +148,7 @@ const Footer = () => {
         content = 
         !invisiblePathList.includes(location.pathname) ? (
             <div className="w-full bg-white border-t border-grey-600">
-                <div className="bg-grey-100 px-30 px-[165px] relative">
+                <div className="bg-white px-30 px-[160px] relative">
                     <div className="absolute right-[215px] top-[85px]">
                         <span className='pr-[14px]'><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'facebook-f', style: 'brands'})} /></span>
                         <span className='pr-[9px]'><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'twitter', style: 'brands'})} /> </span>
@@ -167,7 +167,7 @@ const Footer = () => {
                             <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">FAQ's</li>
                         </ul>
                     </div>
-                    <div className="w-full border-t flex justify-between pb-[11px]">
+                    <div className="w-full border-t flex justify-between pb-[180px]">
                         <div>
                             <ul className="flex pt-[5px]">
                                 <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">Privacy Policy</li>

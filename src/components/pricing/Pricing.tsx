@@ -62,7 +62,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="px-[160px]">
+        <div className="px-[160px] pb-[120px]">
           {/* Comment */}
           <div className="text-center font-light pt-[20px] text-black-300">
             Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada.
@@ -70,70 +70,70 @@ const Pricing = () => {
           {/* month-select-part */}
           <div className="pt-[44px] text-center pb-[44px]">
             <span className="bg-blue-100 rounded-[999px] px-[24px] py-[10px] text-white cursor-pointer">1 Month</span>
-            <span className="rounded-[999px] px-[24px] py-[10px] text-white cursor-pointer text-black-400">6 Months</span>
-            <span className="rounded-[999px] px-[24px] py-[10px] text-white cursor-pointer text-black-400">12 Months</span>
+            <span className="rounded-[999px] px-[24px] py-[10px] cursor-pointer text-black-400">6 Months</span>
+            <span className="rounded-[999px] px-[24px] py-[10px] cursor-pointer text-black-400">12 Months</span>
           </div>
           {/* subscription-card-part */}
           <div className="grid grid-cols-3 gap-[40px]">
             <Card sx={{borderRadius: '8px'}}>
               <CardContent>
-                <div className="text-center">
-                  <div><span className="bg-blue-100 text-[18px] text-white font-bold px-[20px] py-[4px] rounded-[50px] mt-[20px]">Single</span></div>
+                <div className="text-center pt-[16px] pb-[16px]">
+                  <div className="mb-[16px]"><span className="bg-blue-100 text-[18px] text-white font-bold px-[20px] py-[8px] rounded-[50px]">Single</span></div>
                   <div><span className="font-bold text-black-300 text-[54px]">$25&nbsp;</span><span className="text-black-300">/month</span></div>
                 </div>
                 <div className="bg-blue-100 py-[9px] px-[10px] text-white rounded-[12px]">
                   <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">1 Active Job Post</span></div>
                   <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
                 </div>
-                <div className="mt-[26px] mb-[20px]">
+                <div className="my-[26px] px-[10px]">
                   <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
                   <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
                   <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
                 </div>
-                <div className="text-center">
-                  <button className="px-[24px] py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>
+                <div className="text-center pb-[10px] px-[40px]">
+                  <button className="w-full py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>
                 </div>
               </CardContent>
             </Card>
-            <Card sx={{borderRadius: '8px', background: '#1273EB'}}>
-              <CardContent>
-                <div className="text-center">
-                  <div><span className="bg-white text-[18px] text-black font-bold px-[20px] py-[4px] rounded-[50px] mt-[20px]">Professional</span></div>
+            <Card sx={{borderRadius: '8px', background: '#1273EB', padding: 0}}>
+              <CardContent sx={{padding: 0}}>
+                <div className="text-center pt-[16px] pb-[16px]">
+                  <div className="mt-[16px] mb-[16px]"><span className="bg-white text-[18px] font-bold px-[20px] py-[8px] rounded-[50px]">Professional</span></div>
                   <div><span className="font-bold text-white text-[54px]">$179&nbsp;</span><span className="text-white">/month</span></div>
                 </div>
-                <div className="bg-blue-100 py-[9px] px-[10px] text-white rounded-[12px]">
-                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">1 Active Job Post</span></div>
-                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
+                <div className="bg-purple-100 py-[9px] px-[10px] text-white">
+                  <div className="px-[16px]">
+                    <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">2 Active Job Post</span></div>
+                    <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
+                  </div>
                 </div>
-                <div className="mt-[26px] mb-[20px]">
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
+                <div className="my-[26px] px-[26px]">
+                  <div className="flex"><span><CheckCircle className="text-white" /></span><span className="pl-[10px] font-bold pb-[13px] text-white">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
+                  <div className="flex"><span><CheckCircle className="text-white" /></span><span className="pl-[10px] font-bold pb-[13px] text-white">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
+                  <div className="flex"><span><CheckCircle className="text-white" /></span><span className="pl-[10px] font-bold text-white">30-day publishing for each post</span></div>
                 </div>
-                <div className="text-center">
-                  <button className="px-[24px] py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>
+                <div className="text-center pb-[10px] px-[40px]">
+                  <button className="w-full py-[10px] bg-white font-bold rounded-[8px] text-black">Sign Up</button>
                 </div>
               </CardContent>
             </Card>
             <Card sx={{borderRadius: '8px'}}>
               <CardContent>
-                <div className="p-[10px]">
-                  <div className="text-center">
-                    <div><span className="bg-blue-100 text-[18px] text-white font-bold px-[20px] py-[4px] rounded-[50px] mt-[20px]">Single</span></div>
-                    <div><span className="font-bold text-black-300 text-[54px]">$25&nbsp;</span><span className="text-black-300">/month</span></div>
-                  </div>
-                  <div className="bg-blue-100 py-[9px] px-[10px] text-white rounded-[12px]">
-                    <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">1 Active Job Post</span></div>
-                    <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
-                  </div>
-                  <div className="mt-[26px] mb-[20px]">
-                    <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
-                    <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
-                    <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
-                  </div>
-                  <div className="text-center">
-                    <button className="px-[24px] py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>
-                  </div>
+                <div className="text-center pt-[16px] pb-[16px]">
+                  <div className="mb-[16px]"><span className="bg-blue-100 text-[18px] text-white font-bold px-[20px] py-[8px] rounded-[50px]">Single</span></div>
+                  <div><span className="font-bold text-black-300 text-[54px]">$299&nbsp;</span><span className="text-black-300">/month</span></div>
+                </div>
+                <div className="bg-blue-100 py-[9px] px-[10px] text-white rounded-[12px]">
+                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">4 Active Job Post</span></div>
+                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
+                </div>
+                <div className="my-[26px] px-[10px]">
+                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
+                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
+                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
+                </div>
+                <div className="text-center pb-[10px] px-[40px]">
+                  <button className="w-full py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>
                 </div>
               </CardContent>
             </Card>
