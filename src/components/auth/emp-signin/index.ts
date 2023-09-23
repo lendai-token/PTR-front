@@ -1,4 +1,4 @@
-import Signin from "./Signin";
+import EmpSignin from "./EmpSignin";
 export {
-    Signin
+    EmpSignin
 }

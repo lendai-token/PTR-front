@@ -6,6 +6,9 @@ import { useLocation } from 'react-router-dom';
 const invisiblePathList = [
     "/signin",
     "/signup",
+    "/emp/signin",
+    "/emp/signup",
+    "/emp/card",
 ]
 
 const Navbar = () => {

@@ -47,9 +47,9 @@ export default function StyledButton(props: any) {
         ) : props.status === "active" ? (
           <ActiveButton variant="contained">{props.text}</ActiveButton>
         ) : props.status === "normal" ? (
-          <NormalButton variant="contained">{props.text}</NormalButton>
+          <NormalButton variant="contained" endIcon={<CheckCircle />}>{props.text}</NormalButton>
         ): props.status === "contrast-active" ? (
-          <NormalButton variant="contained">{props.text}</NormalButton>
+          <NormalButton variant="contained" sx={{backgroundColor: "#3F69FA", color: '#FFFFFF'}}>{props.text}</NormalButton>
         ): props.status === "contrast-normal" ? (
           <NormalButton variant="contained">{props.text}</NormalButton>
         ) : <></>

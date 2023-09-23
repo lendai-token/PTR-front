@@ -1,4 +1,4 @@
-import Signup from "./Signup";
+import EmpSignup from "./EmpSignup";
 export {
-    Signup
+    EmpSignup
 };

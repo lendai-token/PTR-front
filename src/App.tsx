@@ -15,6 +15,12 @@ import { CreateUserFour } from "./components/create_user_four";
 import { CreateUserFive } from "./components/create_user_five";
 import { CreateUserFinal } from "./components/create_user_final";
 import { Pricing } from "./components/pricing";
+import { EmpSignin } from "./components/auth/emp-signin";
+import { EmpSignup } from "./components/auth/emp-signup";
+import { EmpCard } from "./components/auth/emp-card";
+import { CreateEmployer } from "./components/create_employer";
+import { JobOpen } from "./components/job_open";
+import { Management } from "./components/management";
 
 function App() {
   return (
@@ -33,6 +39,12 @@ function App() {
             <Route path="/create-user/step5" element={<CreateUserFive />} />
             <Route path="/create-user/final" element={<CreateUserFinal />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/emp/signin" element={<EmpSignin />} />
+            <Route path="/emp/signup" element={<EmpSignup />} />
+            <Route path="/emp/card" element={<EmpCard />} />
+            <Route path="/create-employer" element={<CreateEmployer />} />
+            <Route path="/job/open" element={<JobOpen />} />
+            <Route path="/job/management" element={<Management />} />
           </Routes>
           <Footer />
         </Router>

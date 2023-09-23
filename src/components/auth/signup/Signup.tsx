@@ -6,7 +6,7 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { OutlinedInput, InputLabel, InputAdornment, IconButton, Divider, Button, ButtonProps  } from '@mui/material';
+import { OutlinedInput, InputLabel, InputAdornment, IconButton, Divider, Button, ButtonProps, createStyles  } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import FormControl from '@mui/material/FormControl';
 import { styled } from '@mui/material/styles';
@@ -25,6 +25,25 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   },
 }));
 
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#424242',
+  },
+  // '& .MuiInput-underline:after': {
+  //   borderBottomColor: 'green',
+  // },
+  '& .MuiOutlinedInput-root': {
+    // '& fieldset': {
+    //   borderColor: 'red',
+    // },
+    '&:hover fieldset': {
+      borderColor: '#424242',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#424242',
+    },
+  },
+});
 
 const Signup = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -60,13 +79,13 @@ const Signup = () => {
                     </div>
                     <div className="flex flex-col justify-center">
                       <Box sx={{maxWidth: '460px'}}>
-                          <Card>
+                          <Card sx={{borderRadius: '24px'}}>
                               <Box sx={{
                                   marginTop: 5,
                                   marginLeft: 5,
                                   marginRight: 5,
                               }}>
-                                  <Typography component="h1" variant="h5" style={{fontSize: '12.8px'}}>
+                                  <Typography component="h1" variant="h5" style={{fontSize: '12.8px', marginBottom: '10px'}}>
                                       LET'S GET STARTED
                                   </Typography>
                                   <Typography component="h1" variant="h5" style={{fontSize: '25px'}}>
@@ -86,7 +105,7 @@ const Signup = () => {
                                   <Box component="form" noValidate onSubmit={handleSubmit}>
                                       <Grid container spacing={2}>
                                         <Grid item xs={12} sm={12}>
-                                          <TextField
+                                          <CssTextField
                                             autoComplete="given-name"
                                             name="yourName"
                                             id="yourName"
@@ -95,10 +114,11 @@ const Signup = () => {
                                             required
                                             fullWidth
                                             autoFocus
+                                            className="rounded-textfield"
                                           />
                                         </Grid>
                                         <Grid item xs={12}>
-                                          <TextField
+                                          <CssTextField
                                             autoComplete="email"
                                             name="email"
                                             id="email"
@@ -106,12 +126,13 @@ const Signup = () => {
                                             placeholder="johnsondoe@nomail.com"
                                             required
                                             fullWidth
+                                            className="rounded-textfield"
                                           />
                                           </Grid>
                                         <Grid item xs={12}>
                                           <FormControl sx={{ width: '100%' }} variant="outlined">
-                                            <InputLabel htmlFor="password">
-                                              Password
+                                            <InputLabel htmlFor="password" className="custom-input-label">
+                                              Password *
                                             </InputLabel>
                                             <OutlinedInput
                                               autoComplete="new-password"
@@ -119,6 +140,7 @@ const Signup = () => {
                                               id="password"
                                               required
                                               type={showPassword ? "text" : "password"}
+                                              sx={{borderRadius: '8px'}}
                                               endAdornment={
                                                 <InputAdornment position="end">
                                                   <IconButton
@@ -131,6 +153,7 @@ const Signup = () => {
                                                   </IconButton>
                                                 </InputAdornment>
                                               }
+                                              className="custom-outlined-input"
                                               label="Password"
                                             />
                                           </FormControl>
@@ -178,7 +201,7 @@ const Signup = () => {
                                         <Grid container justifyContent="center">
                                           <Grid item>
                                               ALREADY HAVE A PROFILE?&nbsp;
-                                              <Link href="#" variant="body2">
+                                              <Link href="/signin" variant="body2" className="custom-link">
                                                 LOGIN HERE
                                               </Link>
                                           </Grid>
