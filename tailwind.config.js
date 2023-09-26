@@ -41,6 +41,9 @@ module.exports = withMT({
         "blue-400": "#74FBFF", //
         "blue-500": "#F5FBFF", //
         "blue-600": "#0066EE", //
+        "blue-700": "#EFF8FF", //
+        "blue-800": "#E8F4FC", //
+        "blue-900": "#006FFD", //
         "grey-100": "#FBFAFC", //
         "grey-200": "#B5B5B5", //
         "grey-300": "#9C9C9C", //
@@ -51,6 +54,10 @@ module.exports = withMT({
         "grey-800": "#898D90", //
         "grey-900": "#84AED3", //
         "grey-1000": "#D8D8D8", //
+        "grey-1100": "#E9EAEC", //
+        "grey-1200": "#F4F4F4", //
+        "grey-1300": "#EEEEEE", //
+        "grey-1400": "#707070", //
         "purple-100": "#0F43F9", //
         "purple-200": "#3F69FA", //
         "purple-300": "#CFDAFF", //
@@ -58,6 +65,11 @@ module.exports = withMT({
         "black-200": "#5F7D95", //
         "black-300": "#182F43", //
         "black-400": "#2E5A81", //
+        "black-500": "#263A4D", //
+        "black-600": "#212F3F", //
+        "black-700": "#424E5C", //
+        "black-800": "#333333", //
+        "black-900": "#6F7882", //
       }
     },
   },

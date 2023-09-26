@@ -15,6 +15,7 @@ import  facebookIcon  from "../../../assets/imgs/signup/facebook-icon.svg";
 import  appleIcon  from "../../../assets/imgs/signup/apple-icon.svg";
 import { Button as SocialButton} from "@material-tailwind/react";
 import { Card } from "@mui/material";
+import { makeStyles } from '@mui/styles'
 
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: '#FFFFFF',

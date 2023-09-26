@@ -21,6 +21,9 @@ import { EmpCard } from "./components/auth/emp-card";
 import { CreateEmployer } from "./components/create_employer";
 import { JobOpen } from "./components/job_open";
 import { Management } from "./components/management";
+import { Result } from "./components/result";
+import { About } from "./components/about";
+import { Privacy } from "./components/privacy";
 
 function App() {
   return (
@@ -45,6 +48,9 @@ function App() {
             <Route path="/create-employer" element={<CreateEmployer />} />
             <Route path="/job/open" element={<JobOpen />} />
             <Route path="/job/management" element={<Management />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
           <Footer />
         </Router>
