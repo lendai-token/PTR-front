@@ -25,9 +25,9 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="space-x-4">
-                    <Link to="#" className='text-base text-blue-100 bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] hover:text-white hover:bg-blue-100'>Post a Job</Link>
-                    <Link to="/signin" className='text-base hover:text-blue-100 hover:bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] text-white bg-blue-100'>Sign in</Link>
-                    <Link to="/signup" className='text-base text-blue-100 bg-grey-100 rounded border-grey-100 px-[24px] py-[10px] hover:text-white hover:bg-blue-100'>Sign up</Link>
+                    <Link to="/job/open" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Post a Job</Link>
+                    <Link to="/emp/signup" className='text-base hover:text-purple-100 border border-purple-100 hover:bg-white rounded border-white-100 px-[24px] py-[10px] text-white bg-purple-100'>Join as Employer</Link>
+                    <Link to="/signup" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Sign up</Link>
                 </div>
             </div>
         ) : (

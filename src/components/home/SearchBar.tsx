@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { jobList, locationList } from "../../app/const/selectOptions";
+import arrowDown from "../../assets/imgs/create-user/arrow-down.svg";
 import './style.scss';
 
 const SearchBar = () => {
@@ -42,101 +42,19 @@ const SearchBar = () => {
         setVisibleLocation(false);
     };
 
-    const jobList = [
-        {
-            id: 1,
-            name: 'Aqua Fitness Instructor',
-        }, 
-        {
-            id: 2,
-            name: 'Barre Instructor',
-        },
-        {
-            id: 3,
-            name: 'Bootcamp Instructor',
-        },
-        {
-            id: 4,
-            name: 'CrossFit Coach',
-        },
-        {
-            id: 5,
-            name: 'Dance Instructor',
-        },
-        {
-            id: 6,
-            name: 'Functional Training Coach',
-        },
-        {
-            id: 7,
-            name: 'Group Fitness Instructor',
-        },
-        {
-            id: 8,
-            name: 'Martial Arts Instructor',
-        },
-        {
-            id: 9,
-            name: 'Mindfulness/Meditation Instructor',
-        },
-        {
-            id: 10,
-            name: 'Nutritionist/Dietitian',
-        },
-    ];
-
-    const locationList = [
-        {
-            id: 1,
-            name: 'Alabama',
-        }, 
-        {
-            id: 2,
-            name: 'Alaska',
-        },
-        {
-            id: 3,
-            name: 'Arizona',
-        },
-        {
-            id: 4,
-            name: 'Arkansas',
-        },
-        {
-            id: 5,
-            name: 'California',
-        },
-        {
-            id: 6,
-            name: 'Colorado',
-        },
-        {
-            id: 7,
-            name: 'Connecticut',
-        },
-        {
-            id: 8,
-            name: 'Delaware',
-        }
-    ];
-
     return (
-        <div className="mx-[200px]">
+        <div className="mx-[20px] 2xl:mx-[50px]">
             <div className="grid grid-cols-5">
                 <div className="col-span-4 grid grid-cols-4 bg-white border-[1px] rounded-[3px] h-[54px]">
-                    <div tabIndex={0} className="col-span-1 flex items-center h-[40px] pl-4 border-r-[1px] border-grey-300 mt-[6px]">
-                        <div className="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.89419 3.49884L10.5881 3.49852C10.5969 3.49873 10.6057 3.49884 10.6145 3.49884L10.6425 3.4965L17.3353 3.49884L10.6138 16.9697L3.89419 3.49884Z" fill="#B5B5B5"/>
-                            </svg>
-                        </div>
+                    <div tabIndex={0} className="col-span-1 flex items-center h-[40px] border-r-[1px] border-grey-300 mt-[6px]">
                         <button 
-                            className="text-[20px] text-grey-300 p-4 font-normal"
+                            className="text-[18px] text-grey-300 p-4 font-normal w-full flex justify-center items-center"
                             onClick={() => {
                                 setVisibleJob(true);
                             }}
                         >
-                            Job title
+                            <span className="pr-6"><img src={arrowDown} alt="" /></span>
+                            <span>Job title</span>
                         </button>
                     </div>
                     <div className="col-span-3 relative">
@@ -148,10 +66,10 @@ const SearchBar = () => {
                         </span>
                     </div>
                 </div>
-                <div className="col-span-1 pl-4 text-[20px] text-black relative">
+                <div className="col-span-1 pl-2 text-[20px] text-black relative">
                     <div className="h-full">
                         <button 
-                            className="text-[20px] text-grey-300 font-normal p-4 bg-white w-full rounded-[3px] h-[54px] flex justify-center items-center"
+                            className="text-[18px] text-grey-300 font-normal p-4 bg-white w-full rounded-[3px] h-[54px] flex justify-center items-center"
                             onClick={() => {
                                 setVisibleLocation(true);
                             }}
@@ -166,7 +84,7 @@ const SearchBar = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-5">
+            <div className="grid grid-cols-5 relative z-10">
                 <div className="col-span-1">
                     <div ref={dropdownRef} className={`rounded-[3px] dropdown ${visibleJob ? "v" : ""}`}>
                         {visibleJob && (
@@ -191,7 +109,7 @@ const SearchBar = () => {
                     </div>
                 </div>
                 <div className="col-span-3"></div>
-                <div className="col-span-1 pl-4">
+                <div className="col-span-1 pl-2">
                     <div ref={dropdownRef} className={`rounded-[3px] location_dropdown ${visibleLocation ? "v" : ""}`}>
                         {visibleLocation && (
                         <ul className="location_list">

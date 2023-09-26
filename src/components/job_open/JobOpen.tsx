@@ -21,7 +21,6 @@ import StyledTextArea from "../common/StyledTextArea";
 import StyledSelect from "../common/StyledSelect";
 import StyledButton from "../common/StyledButton";
 import { positions } from "../../app/const/selectOptions";
-
 const JobOpen = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -161,7 +160,9 @@ const JobOpen = () => {
         </div>
         {/* section upload resume */}
         <div className="mt-[42px] flex justify-center pb-[24px]">
-          <StyledButton text="Post New Job" status="contrast-active" />
+          <Link to="/job/management">
+            <StyledButton text="Post New Job" status="contrast-active" />
+          </Link>
         </div>
       </div>
     );

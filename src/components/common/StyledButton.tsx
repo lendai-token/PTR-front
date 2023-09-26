@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { CheckCircle } from '@mui/icons-material';
+import { textAlign } from '@mui/system';
 
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: '#FFFFFF',
@@ -45,9 +46,9 @@ export default function StyledButton(props: any) {
         props.status === "checked" ? (
           <ColorButton variant="contained" endIcon={<CheckCircle />}>{props.text}</ColorButton>
         ) : props.status === "active" ? (
-          <ActiveButton variant="contained">{props.text}</ActiveButton>
+          <ActiveButton variant="contained" sx={{justifyContent: 'start'}}>{props.text}</ActiveButton>
         ) : props.status === "normal" ? (
-          <NormalButton variant="contained" endIcon={<CheckCircle />}>{props.text}</NormalButton>
+          <NormalButton variant="contained" sx={{justifyContent: 'start'}}>{props.text}</NormalButton>
         ): props.status === "contrast-active" ? (
           <NormalButton variant="contained" sx={{backgroundColor: "#3F69FA", color: '#FFFFFF'}}>{props.text}</NormalButton>
         ): props.status === "contrast-normal" ? (

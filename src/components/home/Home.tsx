@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useAppSelector } from "../../app/hooks";
 import { selectCityFrom } from "../home/homeSlice";
 import { Link, useNavigate } from "react-router-dom";
@@ -68,7 +68,7 @@ const Home = () => {
       <div className="w-full flex flex-col items-center bg-background overflow-x-hidden">
         <div className="text-center w-full">
           {/* banner */}
-          <div className="min-w-[740px] text-blue-100 relative">
+          <div className="text-blue-100 relative">
             <video autoPlay loop muted className="w-full">
               <source src="./banner-movie.mp4" type='video/mp4' />
             </video>
@@ -87,7 +87,7 @@ const Home = () => {
           </div>
           {/* section activities */}
           <div className="section-activities bg-grey-400">
-            <div className="pt-[170px] text-[35px]">
+            <div className="pt-[100px] text-[35px]">
               <span className="text-blue-100 font-bold">Explore&nbsp;</span>
               <span className="text-black-100 font-bold">activity images on PTRoster</span>
             </div>
@@ -128,55 +128,60 @@ const Home = () => {
             <span className="text-black-100">The smartest choice for&nbsp;</span>
             <span className="text-blue-100">Coaches like you</span>
           </div>
-          <div className="text-center pb-[59px] relative">
+          <div className="text-center pb-[55px] relative">
             <span className="text-[20px] text-black-200">Whether you're looking for sports jobs, you'll find great jobs or coaches here</span>
-            <img src={coachFrame} alt="coach-frame" className="absolute right-[100px] top-[75px]"/>
+            {/* <img src={coachFrame} alt="coach-frame" className="absolute right-[100px] top-[75px]"/> */}
           </div>
-          <div className="px-[165px] pb-[100px]">
-            <div className="w-1/2">
-              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
-                Jobs from around the world
+          <div className="px-[165px] pb-[78px]">
+            <div className="grid grid-cols-2">
+              <div>
+                <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                  Jobs from around the world
+                </div>
+                <div className="text-black-200 text-[17px] pb-[29px]">
+                  This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+                </div>
+                <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                  Top trainers
+                </div>
+                <div className="text-black-200 text-[17px] pb-[29px]">
+                  This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+                </div>
+                <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                  Commitment to results exceeding expectations
+                </div>
+                <div className="text-black-200 text-[17px] pb-[29px]">
+                  This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+                </div>
+                <div className="text-black-100 text-[22px] pb-[6px] font-bold">
+                  Freedom without geographical distance
+                </div>
+                <div className="text-black-200 text-[17px] pb-[29px]">
+                  This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+                </div>
               </div>
-              <div className="text-black-200 text-[17px] pb-[29px]">
-                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
-              </div>
-              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
-                Top trainers
-              </div>
-              <div className="text-black-200 text-[17px] pb-[29px]">
-                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
-              </div>
-              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
-                Commitment to results exceeding expectations
-              </div>
-              <div className="text-black-200 text-[17px] pb-[29px]">
-                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
-              </div>
-              <div className="text-black-100 text-[22px] pb-[6px] font-bold">
-                Freedom without geographical distance
-              </div>
-              <div className="text-black-200 text-[17px] pb-[29px]">
-                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
-              </div>
-
+              <div className="coach-background"></div>
             </div>
           </div>
         </div>
         {/* section icons */}
         <div className="w-full section-icons-frame pb-[132px] ">
           <img src={iconsFrame} alt="icons-frame" className="absolute right-[80px] pt-[45px]" />
-          <div className="px-[160px] pt-[118px] pb-[6px]">
-            <div className="w-1/2">
-              <div className="text-white text-[35px]">
-                <span>Sign up to find opportunities</span>
-                <span><br />to <span className="text-blue-400">become our coach</span></span>
+          <div className="px-[160px] pt-[80px] pb-[6px]">
+            <div className="grid grid-cols-2">
+              <div>
+                <div className="text-white text-[35px]">
+                  <span>Sign up to find opportunities</span>
+                  <span><br />to <span className="text-blue-400">become our coach</span></span>
+                </div>
+                <div className="pb-[29px] text-white text-[20px]">
+                  This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
+                </div>
+                <button className="text-[14px] text-black-100 px-[30px] py-[10px] border border-white rounded-[8px] bg-grey-500">
+                  <Link to="#" >Explore icons</Link>
+                </button>
               </div>
-              <div className="pb-[29px] text-white text-[20px]">
-                This is draft content written to serve as a template for a website, not official content. Correct content will be responded to later.
-              </div>
-              <button className="text-[14px] text-black-100 px-[30px] py-[10px] border border-white rounded-[8px] bg-grey-500">
-                <Link to="#" >Explore icons</Link>
-              </button>
+              <div className="opportunity-background"></div>
             </div>
           </div>
         </div>

@@ -160,9 +160,89 @@ const ratings = [
   },
 ];
 
+const jobList = [
+  {
+      id: 1,
+      name: 'Aqua Fitness Instructor',
+  }, 
+  {
+      id: 2,
+      name: 'Barre Instructor',
+  },
+  {
+      id: 3,
+      name: 'Bootcamp Instructor',
+  },
+  {
+      id: 4,
+      name: 'CrossFit Coach',
+  },
+  {
+      id: 5,
+      name: 'Dance Instructor',
+  },
+  {
+      id: 6,
+      name: 'Functional Training Coach',
+  },
+  {
+      id: 7,
+      name: 'Group Fitness Instructor',
+  },
+  {
+      id: 8,
+      name: 'Martial Arts Instructor',
+  },
+  {
+      id: 9,
+      name: 'Mindfulness/Meditation Instructor',
+  },
+  {
+      id: 10,
+      name: 'Nutritionist/Dietitian',
+  },
+];
+
+const locationList = [
+  {
+      id: 1,
+      name: 'Alabama',
+  }, 
+  {
+      id: 2,
+      name: 'Alaska',
+  },
+  {
+      id: 3,
+      name: 'Arizona',
+  },
+  {
+      id: 4,
+      name: 'Arkansas',
+  },
+  {
+      id: 5,
+      name: 'California',
+  },
+  {
+      id: 6,
+      name: 'Colorado',
+  },
+  {
+      id: 7,
+      name: 'Connecticut',
+  },
+  {
+      id: 8,
+      name: 'Delaware',
+  }
+];
+
 export {
     salutations,
     genders,
     positions,
     ratings,
+    jobList,
+    locationList,
 }

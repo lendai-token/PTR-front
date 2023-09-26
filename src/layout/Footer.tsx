@@ -150,9 +150,21 @@ const Footer = () => {
             <div className="w-full bg-white border-t border-grey-600">
                 <div className="bg-white px-30 px-[160px] relative">
                     <div className="absolute right-[215px] top-[85px]">
-                        <span className='pr-[14px]'><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'facebook-f', style: 'brands'})} /></span>
-                        <span className='pr-[9px]'><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'twitter', style: 'brands'})} /> </span>
-                        <span><FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'linkedin-in', style: 'brands'})} /></span>
+                        <span className='pr-[9px]'>
+                            <a href="https://www.facebook.com/PTRosterJobs" target="_blank">
+                                <FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'facebook-f', style: 'brands'})} />
+                            </a>
+                        </span>
+                        <span className='pr-[9px]'>
+                            <a href="#" target="_blank">
+                                <FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'twitter', style: 'brands'})} /> 
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.linkedin.com/company/ptroster" target="_blank">
+                                <FontAwesomeIcon className="w-[30px] h-[30px] rounded-full p-[10px] bg-blue-100 text-white" icon={icon({name: 'linkedin-in', style: 'brands'})} />
+                            </a>
+                        </span>
                     </div>
                     <div className="pt-[80px]">
                         <Link to="/">
@@ -161,19 +173,51 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className="flex pt-[5px]">
-                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">Our Works</li>
-                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">Careers</li>
-                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">About Us</li>
-                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">FAQ's</li>
+                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">
+                                <Link to="/">
+                                    Our Works
+                                </Link>
+                            </li>
+                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">
+                                <Link to="/">
+                                    Careers
+                                </Link>
+                            </li>
+                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">
+                                <Link to="/about">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li className="py-[26px] pr-[32px] cursor-pointer text-black-300">
+                                <Link to="/">
+                                    FAQ's
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="w-full border-t flex justify-between pb-[180px]">
                         <div>
                             <ul className="flex pt-[5px]">
-                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">Privacy Policy</li>
-                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">Terms and Conditions</li>
-                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">Contact</li>
-                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">Terms and Conditions</li>
+                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">
+                                    <Link to="/privacy">
+                                        Privacy Policy
+                                    </Link>
+                                </li>
+                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">
+                                    <Link to="#">
+                                        Terms and Conditions
+                                    </Link>
+                                </li>
+                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">
+                                    <Link to="#">
+                                        Contact
+                                    </Link>
+                                </li>
+                                <li className="py-[22px] pr-[27px] cursor-pointer text-black-300 text-[12px]">
+                                    <Link to="#">
+                                        Terms and Conditions
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                         <div className="py-[22px] pr-[27px] text-black-300 text-[12px]">

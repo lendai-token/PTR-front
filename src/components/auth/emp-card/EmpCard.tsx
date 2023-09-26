@@ -175,7 +175,7 @@ const EmpCard = () => {
                                       variant="contained"
                                       sx={{ mt: 2, mb: 2 , height: '56px'}}
                                     >
-                                      <RouterLink to="/">CONTINUE</RouterLink>
+                                      <RouterLink to="/create-employer">CONTINUE</RouterLink>
                                     </ColorButton>
                                 </Box>
                             </Box>

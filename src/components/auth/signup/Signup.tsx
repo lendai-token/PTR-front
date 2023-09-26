@@ -16,6 +16,7 @@ import  appleIcon  from "../../../assets/imgs/signup/apple-icon.svg";
 import { Button as SocialButton} from "@material-tailwind/react";
 import { Card } from "@mui/material";
 import { makeStyles } from '@mui/styles'
+import { Link as RouterLink } from "react-router-dom";
 
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: '#FFFFFF',
@@ -166,7 +167,9 @@ const Signup = () => {
                                         variant="contained"
                                         sx={{ mt: 3, mb: 2 , height: '56px'}}
                                       >
-                                        GET STARTED
+                                        <RouterLink to="/create-user/step1">
+                                          GET STARTED
+                                        </RouterLink>
                                       </ColorButton>
                                       <Divider>Or</Divider>
                                       <Box sx={{ width:'100%', mt:'22px'}}>
@@ -176,8 +179,10 @@ const Signup = () => {
                                           color="blue-gray"
                                           className="flex items-center gap-3 w-full justify-center mb-[9px] relative font-trebuchet normal-case font-normal"
                                         >
-                                          <img src={ googleIcon } alt="metamask" className="h-6 w-6 absolute left-[40px]" />
-                                          Sign up with Google
+                                          <RouterLink to="/create-user/step1">
+                                            <img src={ googleIcon } alt="metamask" className="h-6 w-6 absolute left-[40px]" />
+                                            Sign up with Google
+                                          </RouterLink>
                                         </SocialButton>
                                         <SocialButton
                                           size="lg"
@@ -185,8 +190,10 @@ const Signup = () => {
                                           color="blue-gray"
                                           className="flex items-center gap-3 w-full justify-center mb-[9px] relative font-trebuchet normal-case font-normal"
                                         >
-                                          <img src={ facebookIcon } alt="metamask" className="h-6 w-6 absolute left-[40px] top-[12px]" />
-                                          Sign up with Facebook
+                                          <RouterLink to="/create-user/step1">
+                                            <img src={ facebookIcon } alt="metamask" className="h-6 w-6 absolute left-[40px] top-[12px]" />
+                                            Sign up with Facebook
+                                          </RouterLink>
                                         </SocialButton>
                                         <SocialButton
                                           size="lg"
@@ -194,8 +201,10 @@ const Signup = () => {
                                           color="blue-gray"
                                           className="flex items-center gap-3 w-full justify-center relative font-trebuchet normal-case font-normal"
                                         >
-                                          <img src={ appleIcon } alt="metamask" className="h-6 w-6 absolute left-[40px] top-[10px]" />
-                                          Sign up with Apple
+                                          <RouterLink to="/create-user/step1">
+                                            <img src={ appleIcon } alt="metamask" className="h-6 w-6 absolute left-[40px] top-[10px]" />
+                                            Sign up with Apple
+                                          </RouterLink>
                                         </SocialButton>
                                       </Box>
                                       <Box sx={{mt: '48px', mb: '65px'}}>
