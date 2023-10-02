@@ -1,7 +1,6 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Scrollbar } from 'swiper';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectCoverflow } from "swiper";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';

@@ -1,13 +1,16 @@
 .search-input-bar {
   color: #9C9C9C;
-  font-size: 12px !important;
+  font-size: 14px !important;
   height: 40px;
   top: 0px;
   position: absolute;
   width: 100%;
   padding-left: 70px;
   left: 0;
-  margin-top: 9px;
+  margin-top: 6px;
+  @media (min-width: 1024px) {
+    font-size: 18px !important;
+  }
 }
 
 .search-input-bar:focus {
@@ -16,7 +19,10 @@
   
 .search-input-bar::placeholder {
   color: #9C9C9C;
-  font-size: 20px;
+  font-size: 14px;
+  @media (min-width: 1024px) {
+    font-size: 18px !important;
+  }
 }
 
 .enlarger-icon {
@@ -136,9 +142,37 @@ ul.location_list {
   background-position: right;
 }
 
-.opportunity-background {
+.coach-background-mobile {
   background-image: url("../../assets/imgs/landing/frame-coach.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
+}
+
+.opportunity-background {
+  background-image: url("../../assets/imgs/landing/frame-icons.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: right;
+}
+
+.opportunity-background-mobile {
+  background-image: url("../../assets/imgs/landing/frame-icons.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.community-background {
+  background-image: url("../../assets/imgs/landing/frame-community.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.community-background-mobile {
+  background-image: url("../../assets/imgs/landing/frame-community.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }

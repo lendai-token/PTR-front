@@ -56,7 +56,7 @@ const About = () => {
         <div className="about-banner relative h-[346px]">
           <div className="absolute top-2/4 left-2/4 text-[45px] -translate-x-1/2 -translate-y-1/2 text-white w-full px-[200px]">
             <div className="flex items-center justify-center">
-              <div className="bg-purple-200 px-[20px] py-[6px] rounded-[8px] flex items-center">
+              <div className="px-[20px] py-[6px] rounded-[8px] flex items-center">
                 <span className="pr-4">ABOUT</span><img src={logoDark} alt="dark logo image" className="h-[35px]" />
               </div>
             </div>
@@ -69,7 +69,7 @@ const About = () => {
         <div className="px-[165px] pt-[100px] pb-[80px]">
           <div className="grid grid-cols-2">
             <div>
-              <span className="rounded-tl-[28px] bg-purple-200 pl-[70px] pr-[25px] py-[4px] text-white text-[45px] font-bold italic">
+              <span className="rounded-tl-[28px] py-[4px] text-[45px] font-bold italic text-black-800">
                 OUR STORY
               </span>
               <div className="text-[21px] text-grey-1400 text-right pt-[20px]">
@@ -93,7 +93,7 @@ const About = () => {
             </div>
 
             <div className="mt-[100px]">
-              <span className="rounded-tr-[28px] bg-purple-200 pl-[25px] pr-[70px] py-[4px] text-white text-[45px] font-bold italic uppercase">
+              <span className="rounded-tr-[28px] py-[4px] text-black-800 text-[45px] font-bold italic uppercase">
                 What Sets Us Apart
               </span>
               <div className="text-[21px] text-grey-1400 pt-[20px]">
@@ -118,10 +118,10 @@ const About = () => {
         </div>
         {/* bottom banner */}
         <div className="pb-[80px]">
-          <div className="bottom-banner h-[280px]">
+          <div className="bottom-banner">
             <div className="pt-[18px]">
               <div className="flex items-center justify-center">
-                <div className="bg-purple-200 px-[20px] py-[6px] rounded-[8px] flex items-center">
+                <div className="px-[20px] py-[6px] rounded-[8px] flex items-center">
                   <span className="pr-4 uppercase text-[45px] font-bold italic text-white">Join Our Fitness Revolution</span>
                 </div>
               </div>

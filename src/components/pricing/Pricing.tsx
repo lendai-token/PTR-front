@@ -62,7 +62,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="px-[160px] pb-[120px]">
+        <div className="px-[160px] pb-[120px] max-w-7xl mx-auto">
           {/* Comment */}
           <div className="text-center font-light pt-[20px] text-black-300">
             Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada.
@@ -82,13 +82,13 @@ const Pricing = () => {
                   <div><span className="font-bold text-black-300 text-[54px]">$25&nbsp;</span><span className="text-black-300">/month</span></div>
                 </div>
                 <div className="bg-blue-100 py-[9px] px-[10px] text-white rounded-[12px]">
-                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">1 Active Job Post</span></div>
-                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
+                  <div className="flex items-center flex-col"><span className="text-[25px] font-bold">1 Active Job Post</span></div>
+                  <div className="flex items-center flex-col"><span className="text-[22px]">Unlimited Applicants</span></div>
                 </div>
                 <div className="my-[26px] px-[10px]">
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-blue-100"></div></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-blue-100"></div></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-blue-100"></div></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
                 </div>
                 <div className="text-center pb-[10px] px-[40px]">
                   <button className="w-full py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>
@@ -103,14 +103,14 @@ const Pricing = () => {
                 </div>
                 <div className="bg-purple-100 py-[9px] px-[10px] text-white">
                   <div className="px-[16px]">
-                    <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">2 Active Job Post</span></div>
-                    <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
+                    <div className="flex items-center flex-col"><span className="text-[25px] font-bold">2 Active Job Post</span></div>
+                    <div className="flex items-center flex-col"><span className="text-[22px]">Unlimited Applicants</span></div>
                   </div>
                 </div>
                 <div className="my-[26px] px-[26px]">
-                  <div className="flex"><span><CheckCircle className="text-white" /></span><span className="pl-[10px] font-bold pb-[13px] text-white">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
-                  <div className="flex"><span><CheckCircle className="text-white" /></span><span className="pl-[10px] font-bold pb-[13px] text-white">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
-                  <div className="flex"><span><CheckCircle className="text-white" /></span><span className="pl-[10px] font-bold text-white">30-day publishing for each post</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-white"></div> </span><span className="pl-[10px] font-bold pb-[13px] text-white">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-white"></div> </span><span className="pl-[10px] font-bold pb-[13px] text-white">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-white"></div> </span><span className="pl-[10px] font-bold text-white">30-day publishing for each post</span></div>
                 </div>
                 <div className="text-center pb-[10px] px-[40px]">
                   <button className="w-full py-[10px] bg-white font-bold rounded-[8px] text-black">Sign Up</button>
@@ -124,13 +124,13 @@ const Pricing = () => {
                   <div><span className="font-bold text-black-300 text-[54px]">$299&nbsp;</span><span className="text-black-300">/month</span></div>
                 </div>
                 <div className="bg-blue-100 py-[9px] px-[10px] text-white rounded-[12px]">
-                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[25px] font-bold">4 Active Job Post</span></div>
-                  <div className="flex items-center"><span><CheckCircle /></span><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
+                  <div className="flex items-center"><span className="pl-[10px] text-[25px] font-bold">4 Active Job Post</span></div>
+                  <div className="flex items-center"><span className="pl-[10px] text-[22px]">Unlimited Applicants</span></div>
                 </div>
                 <div className="my-[26px] px-[10px]">
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
-                  <div className="flex"><span><CheckCircle className="text-purple-200" /></span><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-blue-100"></div></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Your jobs will be published to PTRoster&rsquo;s website and our partner sites</span></div>
+                  <div className="flex"><span><div className="h-[8px] w-[8px] rounded mt-[7px] bg-blue-100"></div></span><span className="pl-[10px] font-bold pb-[13px] text-black-300">Our jobs will be automatically emailed to candidates who are looking for similar roles and positions</span></div>
+                  <div className="flex"><div className="h-[8px] w-[8px] rounded mt-[7px] bg-blue-100"></div><span className="pl-[10px] font-bold text-black-300">30-day publishing for each post</span></div>
                 </div>
                 <div className="text-center pb-[10px] px-[40px]">
                   <button className="w-full py-[10px] bg-blue-100 font-bold rounded-[8px] text-white">Sign Up</button>

@@ -90,10 +90,10 @@ const CreateUserFinal = () => {
                       <div className="col-span-3 py-[4px] font-normal text-blue-600"><Link to="#">www.Linkedin.com/....</Link></div>
                       <div className="col-span-2 text-right py-[4px]">Instagram:</div>
                       <div className="col-span-3 py-[4px] font-normal text-blue-600"><Link to="#">www.Instagram.com/....</Link></div>
-                      <div className="col-span-2 text-right py-[4px]">Tiktok:</div>
-                      <div className="col-span-3 py-[4px] font-normal text-blue-600"><Link to="#">www.Tiktok.com/....</Link></div>
                       <div className="col-span-2 text-right py-[4px]">Twitter:</div>
                       <div className="col-span-3 py-[4px] font-normal text-blue-600"><Link to="#">www.Twitter.com/....</Link></div>
+                      <div className="col-span-2 text-right py-[4px]">Tiktok:</div>
+                      <div className="col-span-3 py-[4px] font-normal text-blue-600"><Link to="#">www.Tiktok.com/....</Link></div>
                     </div>
                   </div>
                 </CardContent>
