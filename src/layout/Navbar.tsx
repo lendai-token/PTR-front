@@ -124,22 +124,38 @@ const Navbar = () => {
 
     let content;
     if (isDesktop) {
-        content = !invisiblePathList.includes(location.pathname) ? (
-            <div className="w-full px-30 flex items-center justify-between bg-white px-[72px] py-[22px]">
-                <div className='flex items-center'>
-                    <Link to="/">
-                        <img src={logo} alt="logo-png" />
-                    </Link>
+        if(location.pathname.includes("employer")){
+            content = (
+                <div className="w-full px-30 flex items-center justify-between bg-white px-[72px] py-[22px] max-w-[1440px] mx-auto">
+                    <div className='flex items-center'>
+                        <Link to="/">
+                            <img src={logo} alt="logo-png" />
+                        </Link>
+                    </div>
+                    <div className="space-x-4">
+                        <Link to="/pricing" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Post a Job</Link>
+                        <Link to="/job/management" className='text-base hover:text-purple-100 border border-purple-100 hover:bg-white rounded border-white-100 px-[24px] py-[10px] text-white bg-purple-100'>Log in</Link>
+                    </div>
                 </div>
-                <div className="space-x-4">
-                    <Link to="/job/open" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Post a Job</Link>
-                    <Link to="/emp/signup" className='text-base hover:text-purple-100 border border-purple-100 hover:bg-white rounded border-white-100 px-[24px] py-[10px] text-white bg-purple-100'>Join as Employer</Link>
-                    <Link to="/signup" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Sign up</Link>
+            );
+        }else{
+            content = !invisiblePathList.includes(location.pathname) ? (
+                <div className="w-full px-30 flex items-center justify-between bg-white px-[72px] py-[22px] max-w-[1440px] mx-auto">
+                    <div className='flex items-center'>
+                        <Link to="/">
+                            <img src={logo} alt="logo-png" />
+                        </Link>
+                    </div>
+                    <div className="space-x-4">
+                        <Link to="/signup" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Sign up</Link>
+                        <Link to="/signin" className='text-base hover:text-purple-100 border border-purple-100 hover:bg-white rounded border-white-100 px-[24px] py-[10px] text-white bg-purple-100'>Log in</Link>
+                        <Link to="/employer" className='text-base text-purple-100 rounded-[8px] border border-purple-100 px-[24px] py-[10px] hover:text-white hover:bg-purple-100'>Employer / Post Job </Link>
+                    </div>
                 </div>
-            </div>
-        ) : (
-            <div></div>
-        )
+            ) : (
+                <div></div>
+            )
+        }
         
     } else if (isTablet) {
         content = !invisiblePathList.includes(location.pathname) ? (

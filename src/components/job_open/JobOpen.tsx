@@ -65,6 +65,60 @@ const JobOpen = () => {
             POST NEW JOB OPENING
           </div>
         </div>
+        {/* section-progress */}
+        <div className="text-center">
+          <div className="progress-ruler mx-[260px] pt-[22px] relative mt-[42px] mb-[100px]">
+            <div className=" w-[99%] m-auto flex justify-between items-center">
+              <div className="bg-purple-200 h-[6px] w-[25%]"></div>
+              <div className="bg-purple-200 h-[6px] w-[25%]"></div>
+              <div className="bg-purple-200 h-[6px] w-[25%]"></div>
+              <div className="bg-purple-200 h-[6px] w-[25%]"></div>
+            </div>
+            <div className="dots-part flex justify-between absolute w-full top-[8px]">
+              <div>
+                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center relative">
+                  <span className="text-[14px] font-bold text-white">1</span>
+                </div>
+                <div className="absolute -translate-x-[30%] translate-y-[10px] font-bold">
+                Pick Your Plan
+                </div>
+              </div>
+              <div>
+                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center relative">
+                  <span className="text-[14px] font-bold text-white">2</span>
+                </div>
+                <div className="absolute -translate-x-[31%] translate-y-[10px] font-bold">
+                Set Up Account
+                </div>
+              </div>
+              <div>
+                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center">
+                  <span className="text-[14px] font-bold text-white">3</span>
+                </div>
+                <div className="absolute -translate-x-[33%] translate-y-[10px] font-bold">
+                Company Profile
+                </div>
+              </div>
+              <div>
+                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center">
+                  <span className="text-[14px] font-bold text-white">4</span>
+                </div>
+                <div className="absolute -translate-x-[30%] translate-y-[10px] font-bold">
+                Billing Information
+                </div>
+              </div>
+              <div>
+                <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center">
+                  <span className="text-[14px] font-bold text-white">5</span>
+                </div>
+                <div className="absolute -translate-x-[33%] translate-y-[10px] font-bold text-[23px] whitespace-nowrap">
+                Post a Job
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
         {/* section-input */}
         <div className="max-w-[810px] mx-auto mt-[32px]">
           <div className="text-[20px] font-bold text-black-300">
@@ -148,6 +202,116 @@ const JobOpen = () => {
               <StyledButton text="Require CPR Certification" status="checked" />
             </div>
             <div className="col-span-2">
+              <StyledButton text="Require AED Certification" status="normal" />
+            </div>
+            <div className="col-span-3">
+             <StyledTextField label="Required Certification #1" placeholder="none" id="job-open-cert1"/>
+            </div>
+            <div className="col-span-3">
+             <StyledTextField label="Required Certification #2" placeholder="none" id="job-open-cert2"/>
+            </div>
+          </div>
+        </div>
+        {/* section upload resume */}
+        <div className="mt-[42px] flex justify-center pb-[24px]">
+          <Link to="/job/management">
+            <StyledButton text="Post New Job" status="contrast-active" />
+          </Link>
+        </div>
+      </div>
+    );
+  }else if(isMobile){
+    content = (
+      <div className="create-user-background">
+        <div className="banner h-[196px] relative">
+          <div className="absolute top-2/4 left-2/4 text-[30px] text-center -translate-x-1/2 -translate-y-1/2 text-white">
+            POST NEW JOB OPENING
+          </div>
+        </div>
+    
+        {/* section-input */}
+        <div className="max-w-[425px] mx-auto mt-[32px] px-[20px]">
+          <div className="text-[20px] font-bold text-black-300">
+            Job Info
+          </div>
+
+          <div className="grid grid-cols-6 gap-x-4 gap-y-1 mt-[16px]">
+            <div className="col-span-6">
+              <StyledTextField label="Job Post Location" placeholder="24 Hour Fitness – Houston" id="job-open-location"/>
+            </div>
+            <div className="col-span-3">
+              <StyledSelect label="Position" placeholder="Drop down choice" id="job-open-position" options={positions}/>
+            </div>
+            <div className="col-span-3">
+              <StyledTextField label="Postal/Zip" placeholder="10000" id="job-open-zipcode"/>
+            </div>
+            <div className="col-span-3">
+              <StyledTextField label="Internal Job Title" placeholder="Trainer" id="job-open-internal"/>
+            </div>
+            <div className="col-span-3">
+              <StyledSelect label="Level of Work" placeholder="Drop down choice" id="job-open-level" options={positions}/>
+            </div>
+            <div className="col-span-6">
+              <div className="text-[14px] pl-[6px] pb-[4px] text-black-300 flex justify-between items-center">
+                <span>Job Description</span>
+                <span>88/100</span>
+              </div>
+              <div className="mt-[3px]">
+                <StyledTextArea />
+              </div>
+            </div>
+
+            <div className="col-span-6">
+              <div className="text-[20px] font-bold text-black-300 mt-[18px]">
+                Education & Work Experience
+              </div>
+              <div className="text-[14px] text-grey-800">
+                Select the level of education and work experience you seek for this specific job position?
+              </div>
+            </div>
+            <div className="col-span-6">
+              <div className="grid grid-cols-6 gap-x-4">
+                <div className="col-span-3">
+                  <StyledSelect label="Education Level" placeholder="Drop down choice" id="job-open-edu-level" options={positions}/>
+                </div>
+                <div className="col-span-3">
+                  <StyledTextField label="Fitness Industry Experience" placeholder="none" id="job-open-fitness-exp"/>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-6">
+              <StyledTextField label="Company&apos;s Website" placeholder="website" id="job-open-website"/>
+            </div>
+            <div className="col-span-6">
+              <StyledTextField label="Company&apos;s LinkedIn" placeholder="link" id="job-open-linkdin"/>
+            </div>
+            {/* <div className="col-span-2"></div> */}
+            <div className="col-span-3">
+              <StyledTextField label="Fitness Sales Experience" placeholder="none" id="job-open-fitness-sales"/>
+            </div>
+            <div className="col-span-3">
+              <StyledSelect label="Management Experience" placeholder="Drop down choice" id="job-open-management-exp" options={positions}/>
+            </div>
+
+            <div className="col-span-6 mb-[13px]">
+              <div className="text-[20px] font-bold text-black-300 mt-[18px]">
+                Certifications and Languages Requirement
+              </div>
+              <div className="text-[14px] text-grey-800">
+                <div>
+                  Select what level of certification and language requirements you seek for this specific job position.
+                </div>
+                <div>•	Pick up to five (5) levels of certifications. </div>
+                <div>•	Pick up to three (3) languages</div>
+              </div>
+            </div>
+            <div className="col-span-6">
+              <StyledButton text="Require National Certification" status="checked" />
+            </div>
+            <div className="col-span-6">
+              <StyledButton text="Require CPR Certification" status="checked" />
+            </div>
+            <div className="col-span-6">
               <StyledButton text="Require AED Certification" status="normal" />
             </div>
             <div className="col-span-3">

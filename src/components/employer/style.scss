@@ -1,0 +1,83 @@
+.employer-main-banner{
+    background-image: url('../../assets/imgs/employer/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.employer-main-banner-title h1{
+    font-family: Poppins;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: Poppins;
+    color: white;
+}
+
+.employer-main-content-title h1{
+    font-family: Poppins;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: Poppins;
+    color: #182F43
+    ;
+}
+
+.employer-main-content-text p{
+    //styleName: Body Light/16 pt;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: justified;
+    color: #182F43;
+}
+
+
+//mobile css design
+
+.mobile-employer-main-banner{
+    background-image: url('../../assets/imgs/employer/mobile-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.mobile-employer-main-content-img{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2196f3b3);
+}
+
+.mobile-employer-main-content-title{
+    font-family: Poppins;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.mobile-employer-main-content-title h1{
+    color: #000000;
+}
+
+.mobile-employer-main-content-title h2{
+    color: #182F43
+    ;
+}
+
+.mobile-employer-main-content-text p{
+    width: 304px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: justified;
+    color: #182F43;
+}

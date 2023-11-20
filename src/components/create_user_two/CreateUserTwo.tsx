@@ -127,16 +127,16 @@ const CreateUserTwo = () => {
           </div>
 
           <div className="text-[20px] font-bold text-black-300 mt-[12px]">
-            Education
+            Work Experience
           </div>
           <div className="text-[14px] text-grey-800">
-            Select the number of years of experience for each option
+            Select the number of years of experience for each option.
           </div>
-          <div className="grid grid-cols-6 gap-4 mt-[6px]">
+          {/* <div className="grid grid-cols-6 gap-4 mt-[6px]">
             <div className="col-span-2">
               <StyledSelect placeholder="Drop down choice" id="profile-exp-year" options={salutations}/>
             </div>
-          </div>
+          </div> */}
           
           <div className="grid grid-cols-6 gap-4 mt-[12px]">
             <div className="col-span-2">
@@ -190,6 +190,112 @@ const CreateUserTwo = () => {
         {/* section-pagination */}
         <div className="mt-[50px] text-center pb-[59px]">
           <span className="text-grey-800 text-[14px]"><Link to="/create-user/step1">&lt; PREVIOUS</Link>&nbsp;/&nbsp;</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/step3">NEXT &gt;</Link></span>
+        </div>
+      </div>
+    );
+  }else if(isMobile){
+    content = (
+      <div className="bg-[#E8F4FC]">
+        {/* banner */}
+        <div className="create2-mobile-banner bg-[#1273EB] h-[126px] rounded-[8px] flex flex-row item-center">
+          <div className="basis-1/3 p-[13px]">
+            <div className="create1-mobile-banner-spinner2 w-[100px] h-[100px] flex justify-center items-center"> 
+              <span className="progress-status-text">2 of 5</span>
+            </div>
+          </div>
+          <div className="basis-2/3 flex justify-start items-center">
+            <div className="create1-mobile-banner-title">
+              <h1>Getting to Know You</h1>
+              <h2>Credentials</h2>
+            </div>
+          </div>
+        </div>
+        
+        {/* content */}
+        <div className="create1-mobile-content  px-[20px] mt-[12px]">
+          <div className="create2-mobile-content-education">
+            {/* Education */}
+
+            <div>
+              <h1>Education</h1>
+              <p className="text-grey-800 text-[13px] font-[400]">
+               Select your highest level of education achieved.
+              </p>
+              <div className="mt-[6px]">
+                <StyledSelect placeholder="Drop down choice" id="profile-edu-level" options={salutations}/>
+              </div>
+            </div>
+            {/* Work Experience */}
+            <div className="mt-[20px]">
+              <h1>
+                Work Experience
+              </h1>
+              <p className="text-grey-800 text-[13px] font-[400]">
+                Select the number of years of experience for each option.
+              </p>
+              <div className="">
+                <div className="mt-[6px]">
+                  <StyledSelect label="Fitness Industry Experience" placeholder="None" id="profile-industry-exp" options={salutations}/>
+                </div>
+                <div className="mt-[6px]">
+                  <StyledSelect label="Fitness Sales Experience" placeholder="None" id="profile-sales-exp" options={salutations}/>
+                </div>
+                <div className="mt-[6px]">
+                  <StyledSelect label="General Mangement Experience" placeholder="None" id="profile-general-exp" options={salutations}/>
+                </div>
+              </div>
+            </div>
+            {/* Work Experience */}
+            <div className="mt-[15px]">
+              <h1>
+                Certifications
+              </h1>
+              <p className="text-grey-800 text-[13px] font-[400]">
+                Select up to five (5) nationally recognized certifications that you currently hold.
+              </p>
+              <div className="">
+                <div className="flex flex-row justify-around items-center space-x-4">
+                  <div className="basis-1/2">
+                    <div className="mt-[6px]">
+                      <StyledSelect label="Industry Certification 1" placeholder="None" id="profile-certification1" options={genders}/>
+                    </div>
+                    <div className="mt-[6px]">
+                      <StyledSelect label="Industry Certification 3" placeholder="None" id="profile-certification3" options={genders}/>
+                    </div>
+                  </div>
+                  <div className="basis-1/2">
+                    <div className="mt-[6px]">
+                      <StyledSelect label="Industry Certification 2" placeholder="None" id="profile-certification1" options={genders}/>
+                    </div>
+                    <div className="mt-[6px]">
+                      <StyledSelect label="Industry Certification 4" placeholder="None" id="profile-certification1" options={genders}/>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-[6px]">
+                  <StyledSelect label="Industry Certification 5" placeholder="None" id="profile-certification5" options={genders}/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[14px] text-grey-800 mt-[18px]">
+                Select if you have either or both of these certifications
+              </div>
+              <div className="mt-[10px]">
+                <StyledButton text="Automated External Defibrillator (AED)" status="checked" />
+              </div>
+              <div className="mt-[10px]">
+                <StyledButton text="Cardiopulmonary Resuscitation (CPR)" status="normal" />
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        {/* section-pagination */}
+        <div className="mt-[24px] text-center pb-[25px]">
+          <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
           <span className="text-purple-200 text-[14px]"><Link to="/create-user/step3">NEXT &gt;</Link></span>
         </div>
       </div>

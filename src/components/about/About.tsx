@@ -8,10 +8,7 @@ import { useAppDispatch } from "../../app/hooks";
 import url from "../../app/const/url";
 import "./style.scss";
 import logoDark from "../../assets/imgs/about/logo-dark.png";
-import setup1 from  "../../assets/imgs/about/setup1.png";
-import setup2 from  "../../assets/imgs/about/setup2.png";
-import setup3 from  "../../assets/imgs/about/setup3.png";
-import setup4 from  "../../assets/imgs/about/setup4.png";
+
 
 const About = () => {
   const dispatch = useAppDispatch();
@@ -54,7 +51,7 @@ const About = () => {
       <div className="create-user-background">
         {/* top banner */}
         <div className="about-banner relative h-[346px]">
-          <div className="absolute top-2/4 left-2/4 text-[45px] -translate-x-1/2 -translate-y-1/2 text-white w-full px-[200px]">
+          <div className="max-w-[1440px] mx-auto absolute top-2/4 left-2/4 text-[45px] -translate-x-1/2 -translate-y-1/2 text-white w-full px-[200px]">
             <div className="flex items-center justify-center">
               <div className="px-[20px] py-[6px] rounded-[8px] flex items-center">
                 <span className="pr-4">ABOUT</span><img src={logoDark} alt="dark logo image" className="h-[35px]" />
@@ -66,12 +63,14 @@ const About = () => {
           </div>
         </div>
         {/* section-input */}
-        <div className="px-[165px] pt-[100px] pb-[80px]">
+        <div className="px-[165px] pt-[100px] pb-[80px] max-w-[1440px] mx-auto">
           <div className="grid grid-cols-2">
             <div>
-              <span className="rounded-tl-[28px] py-[4px] text-[45px] font-bold italic text-black-800">
-                OUR STORY
-              </span>
+              <div className="text-end">
+                <span className="rounded-tl-[28px] py-[4px] text-[45px] font-bold italic text-black-800">
+                  OUR STORY
+                </span>
+              </div>
               <div className="text-[21px] text-grey-1400 text-right pt-[20px]">
                 Our journey began with a shared passion for health, wellness, and fitness. The founding team, composed of industry insiders and visionaries with over 20 years in the industry, recognized the challenges faced by fitness professionals and employers alike. From gym owners struggling to find the ideal personal trainer to fitness enthusiasts seeking their dream job, there was a gap that needed filling.
               </div>
@@ -112,14 +111,12 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-            
           </div>
         </div>
         {/* bottom banner */}
         <div className="pb-[80px]">
           <div className="bottom-banner">
-            <div className="pt-[18px]">
+            <div className="pt-[18px] max-w-[1440px] mx-auto">
               <div className="flex items-center justify-center">
                 <div className="px-[20px] py-[6px] rounded-[8px] flex items-center">
                   <span className="pr-4 uppercase text-[45px] font-bold italic text-white">Join Our Fitness Revolution</span>
@@ -130,6 +127,86 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    );
+  } else if(isTablet){
+
+  } else {
+    content = (
+      <div className="bg-[#E8F4FC]">
+        <div className="mobile-banner h-[359px] text-center">
+          <span>ABOUT</span>
+          <h1>
+            Welcome to PTRoster, a destination for connecting passionate professionals with rewarding career opportunities in the dynamic world of health and fitness. The heart of a thriving health and fitness industry lies in the people who drive it, and our mission is to empower both job seekers and employers to find their perfect match.
+          </h1>
+        </div>
+        <div className="mobile-ourstory-part text-center">
+          <div className="mx-[20px] mt-[20px] mobile-ourstory h-[290px] rounded-[12px]"></div>
+          <div className="pt-[28px] px-[26px]">
+            <span>
+              Our Story 
+            </span>
+            <h1>
+              Our journey began with a shared passion for health, wellness, and fitness. The founding team, composed of industry insiders and visionaries with over 20 years in the industry, recognized the challenges faced by fitness professionals and employers alike. From gym owners struggling to find the ideal personal trainer to fitness enthusiasts seeking their dream job, there was a gap that needed filling.
+            </h1>
+          </div>
+        </div>
+        <div className="mobile-apart-part px-[55px] pb-[30px]">
+          <div className="mt-[50px] ">
+            <div className="grid grid-rows-2 grid-flow-col gap-4">
+              <div className="row-span-1 grid grid-rows-6 grid-flow-col gap-4 h-[188px]">
+                <div className="row-start-1 row-end-7 setup1-background col-span-2 setup1-background rounded-[8px] w-[209px]"></div>
+                <div className="row-start-2 row-span-5 col-span-1 setup5-background rounded-[8px] w-[98px]"></div>
+              </div>
+              <div className="row-span-1 grid grid-rows-6 grid-flow-col gap-4 h-[188px]">
+                <div className="row-start-1 row-span-5 col-span-1 setup6-background rounded-[8px] w-[98px]"></div>
+                <div className="row-start-1 row-end-7 setup4-background col-span-2 setup1-background rounded-[8px] w-[209px]"></div>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mobile-apart-part-title mt-[54.8px]">
+            <label> What Sets Us Apart </label>
+            <h2 className="mt-[21px] w-[330px]">At PTRoster, we're more than just a job board; we're a supportive ecosystem that fosters growth, well-being, and success. Here's what sets us apart:</h2>
+          </div>
+          <div className="mobile-apart-part-content text-center">
+            <div className="flex flex-col items-center mt-[10px]">
+              <div className="bg-[#006FFD] w-[24px] h-[24px] rounded-[20px] text-center">
+                <span>1</span>
+              </div>
+              <div>
+                <h1>
+                  Specialized Focus: We exclusively serve the health and fitness industry, which means we understand the unique needs, skills, and aspirations of both job seekers and employers in this industry.
+                </h1>
+              </div>
+            </div>
+            <div className="flex flex-col items-center mt-[10px]">
+              <div className="bg-[#006FFD] w-[24px] h-[24px] rounded-[20px] text-center">
+                <span>2</span>
+              </div>
+              <div>
+                <h1>
+                  Personalized Matchmaking: Our platform utilizes data-driven insights to match the right talent with the right opportunities. We're not just about quantity; we're about quality connections.
+                </h1>
+              </div>
+            </div>
+            <div className="flex flex-col items-center mt-[10px]">
+              <div className="bg-[#006FFD] w-[24px] h-[24px] rounded-[20px] text-center">
+                <span>3</span>
+              </div>
+              <div>
+                <h1>
+                  Personalized Matchmaking: Our platform utilizes data-driven insights to match the right talent with the right opportunities. We're not just about quantity; we're about quality connections.
+                </h1> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mobile-footer-banner h-[388px] px-[41px] text-center">
+          <h1 className="px-[8px]"> Join Our Fitness Revolution </h1>
+          <h2 className="w-[367px] py-[10px]">
+            Whether you're a fitness professional looking to take the next step in your career or an employer seeking exceptional talent, PTRoster is your trusted partner. Join us in shaping the future of the health and fitness industry. Start your journey with us today!
+          </h2>
         </div>
       </div>
     );

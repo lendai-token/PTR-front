@@ -154,6 +154,63 @@ const CreateUserFive = () => {
         </div>
       </div>
     );
+  }else if(isMobile){
+    content = (
+      <div className="bg-[#E8F4FC]">
+        {/* banner */}
+        <div className="create2-mobile-banner bg-[#1273EB] h-[126px] rounded-[8px] flex flex-row item-center">
+          <div className="basis-1/3 p-[13px]">
+            <div className="create1-mobile-banner-spinner5 w-[100px] h-[100px] flex justify-center items-center"> 
+              <span className="progress-status-text">5 of 5</span>
+            </div>
+          </div>
+          <div className="basis-2/3 flex justify-start items-center">
+            <div className="create1-mobile-banner-title">
+              <h1>Getting to Know You</h1>
+              <h2>Rating</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* content */}
+        <div className="create5-mobile-content px-[20px]">
+          <div className="">
+            <img src={ratingImage} alt="rating-image" className="h-[385px] mt-[-20px]" />
+          </div>
+          <div className="mt-[18px]">
+            <div className="text-[20px] font-bold text-black-300 mb-[8px] font-[700]">
+              What is a personal rating scale?
+            </div>
+            <div className="text-[14px] text-grey-800">
+              It is a tool that future employers will use to evaluate and rate an individual's personal attributes, skills, and characteristics. It is designed to assess various qualities and competencies that are not easily quantifiable through traditional methods like academic grades or work experience. The following scale includes subjective criteria that can be essential in both personal and professional settings.
+            </div>
+            <div className="text-[20px] font-bold text-black-300 mb-[8px] mt-[9px]">
+              What should you do when answering the following items?
+            </div>
+            <div className="text-[14px] text-grey-800">
+              Be honest. The importance of the following personal rating scale for future employers lies in its ability to provide a more comprehensive and holistic view of your specific suitability for a particular job or work environment.
+            </div>
+          </div>
+          {/* section rating stars */}
+          <div className="create5-mobile-content-rating mt-[20px] grid grid-cols-6 gap-1">
+            {
+              ratings.map((item)=>{
+                return (
+                  <div className="col-span-2">
+                    <StyledRatingBar text={item.text}/>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+        {/* section-pagination */}
+        <div className="mt-[24px] text-center pb-[25px]">
+          <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/final">NEXT &gt;</Link></span>
+        </div>
+      </div>
+    );
   }
   return <>{content}</>;
 };

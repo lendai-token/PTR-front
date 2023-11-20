@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { CheckCircle } from '@mui/icons-material';
-
+import { useNavigate } from 'react-router-dom';
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: '#FFFFFF',
   width: '100%',
@@ -39,19 +39,21 @@ const NormalButton = styled(Button)<ButtonProps>(({ theme }) => ({
 }));
 
 export default function StyledButton(props: any) {
+  const navigate = useNavigate();
+
   return (
     <Stack spacing={2} direction="row">
       {
         props.status === "checked" ? (
-          <ColorButton variant="contained" endIcon={<CheckCircle />}>{props.text}</ColorButton>
+          <ColorButton onClick={() => navigate(props.navigateURL)} variant="contained" endIcon={<CheckCircle />}>{props.text}</ColorButton>
         ) : props.status === "active" ? (
-          <ActiveButton variant="contained" sx={{justifyContent: 'start'}}>{props.text}</ActiveButton>
+          <ActiveButton onClick={() => navigate(props.navigateURL)} variant="contained" sx={{justifyContent: 'start'}}>{props.text}</ActiveButton>
         ) : props.status === "normal" ? (
-          <NormalButton variant="contained" sx={{justifyContent: 'start'}}>{props.text}</NormalButton>
+          <NormalButton onClick={() => navigate(props.navigateURL)} variant="contained" sx={{justifyContent: 'start'}}>{props.text}</NormalButton>
         ): props.status === "contrast-active" ? (
-          <NormalButton variant="contained" sx={{backgroundColor: "#3F69FA", color: '#FFFFFF'}}>{props.text}</NormalButton>
+          <NormalButton onClick={() => navigate(props.navigateURL)} variant="contained" sx={{backgroundColor: "#3F69FA", color: '#FFFFFF'}}>{props.text}</NormalButton>
         ): props.status === "contrast-normal" ? (
-          <NormalButton variant="contained">{props.text}</NormalButton>
+          <NormalButton onClick={() => navigate(props.navigateURL)} variant="contained">{props.text}</NormalButton>
         ) : <></>
       }
     </Stack>

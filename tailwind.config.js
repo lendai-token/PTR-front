@@ -58,6 +58,8 @@ module.exports = withMT({
         "grey-1200": "#F4F4F4", //
         "grey-1300": "#EEEEEE", //
         "grey-1400": "#707070", //
+        "grey-1500": "#FAFAFA", //
+        "grey-1600": "#EEEEEE", //
         "purple-100": "#0F43F9", //
         "purple-200": "#3F69FA", //
         "purple-300": "#CFDAFF", //
@@ -70,9 +72,26 @@ module.exports = withMT({
         "black-700": "#424E5C", //
         "black-800": "#333333", //
         "black-900": "#6F7882", //
+        "black-1000": "#212121", //
+        "black-1100": "#616161", //
       }
     },
   },
-  plugins: [],
+  corePlugins: {
+    // ...
+    borderWidth: false, // Disable the default borderWidth utilities
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      const customUtilities = {
+        '.border-half': {
+          borderWidth: '0.5px',
+          borderColor: '#D4D6DD',
+        },
+      };
+
+      addUtilities(customUtilities, ['responsive', 'hover']);
+    },
+  ],
 });
 

@@ -24,6 +24,8 @@ import { Management } from "./components/management";
 import { Result } from "./components/result";
 import { About } from "./components/about";
 import { Privacy } from "./components/privacy";
+import  Contact  from './components/contact/contact';
+import EmployerMain from "./components/employer/employer_main";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
             <Route path="/result" element={<Result />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/employer" element={<EmployerMain />} />
           </Routes>
           <Footer />
         </Router>

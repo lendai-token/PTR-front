@@ -177,6 +177,79 @@ const CreateUserFour = () => {
         </div>
       </div>
     );
+  }else if(isMobile){
+    content = (
+      <div className="bg-[#E8F4FC]">
+        {/* banner */}
+        <div className="create2-mobile-banner bg-[#1273EB] h-[126px] rounded-[8px] flex flex-row item-center">
+          <div className="basis-1/3 p-[13px]">
+            <div className="create1-mobile-banner-spinner4 w-[100px] h-[100px] flex justify-center items-center"> 
+              <span className="progress-status-text">4 of 5</span>
+            </div>
+          </div>
+          <div className="basis-2/3 flex justify-start items-center">
+            <div className="create1-mobile-banner-title">
+              <h1>Getting to Know You</h1>
+              <h2>Social/Resume</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* content */}
+        <div className="px-[20px] mt-[12px]">
+          <div className="create3-mobile-content-social">
+            <div className="text-[20px] font-bold text-black-300">
+              Social
+            </div>
+            <div className="text-[14px] text-grey-800">
+              Link to your social media profiles that highlight your experience, expertise, and skills.
+            </div>
+            <div className="mt-[20px]">
+              <div>
+                <StyledTextField label="LinkedIn" placeholder="www.Linkedin.com/..." id="profile-linkedin"/>
+              </div>
+              <div className="mt-[7px]">
+                <StyledTextField label="Instagram" placeholder="www.Instagram.com/...." id="profile-instagram"/>
+              </div>
+              <div className="mt-[7px]">
+                <StyledTextField label="Twitter" placeholder="www.Twitter.com/..." id="profile-twitter"/>
+              </div>
+              <div className="mt-[7px]">
+                <StyledTextField label="TikTok" placeholder="www.tiktok.com/..." id="profile-tiktok"/>
+              </div>
+            </div>
+          </div>
+
+          <div className="create3-mobile-content-profile mt-[20px]">
+            <div className="text-[20px] font-bold text-black-300">
+             Profile Summary
+            </div>
+            <div className="text-[14px] text-grey-800">
+              Keep your profile short and to the point to keep the hiring manager engaged and interested.
+            </div>
+            <div className="mt-[3px]">
+              <StyledTextArea/>
+            </div>
+            <div className="py-[15px] flex flex-row justify-center">
+              <span className="flex items-center"><img src={pdfOnly} alt="pdf-only-icon" /></span><span className="text-grey-900 pl-[5px]">PDF format only.</span>
+            </div>
+            <div className="mt-[14px] flex flex-row justify-around">
+              <div className="">
+                <StyledButton text="Upload New Resume" status="contrast-active" />
+              </div>
+              <div className="">
+                <StyledButton text="View Your Resume" status="contrast-normal" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* section-pagination */}
+        <div className="mt-[24px] text-center pb-[25px]">
+          <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/step5">NEXT &gt;</Link></span>
+        </div>
+      </div>
+    );
   }
   return <>{content}</>;
 };

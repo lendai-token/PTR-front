@@ -3,6 +3,7 @@ import { FormControl, FormControlLabel, OutlinedInput, InputLabel, InputAdornmen
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles'
 import { Link as RouterLink } from "react-router-dom";
+import MobileHeader from '../../common/MobileHeader';
 import { useScreenSize } from "../../../app/hooks";
 import logo from '../../../assets/imgs/logo.svg';
 import "./style.scss";
@@ -20,13 +21,7 @@ const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
     color: '#424242',
   },
-  // '& .MuiInput-underline:after': {
-  //   borderBottomColor: 'green',
-  // },
   '& .MuiOutlinedInput-root': {
-    // '& fieldset': {
-    //   borderColor: 'red',
-    // },
     '&:hover fieldset': {
       borderColor: '#424242',
     },
@@ -80,7 +75,7 @@ const EmpSignin = () => {
       <>
         <div className="emp-signin-page"></div>
         <div className="signin-section">
-            <div className="grid grid-cols-2 h-screen">
+            <div className="grid grid-cols-2 h-screen max-w-[1440px] mx-auto">
                 <div className="flex flex-col justify-center mr-[68px]">
                   <RouterLink to="/">
                     <img src={logo} alt="logo" className="pt-[9px] pb-[11px] pl-[100px] pr-[14px] rounded-br-[24.5px] bg-grey-700 mr-[120px] max-w-[300px] " />
@@ -96,8 +91,9 @@ const EmpSignin = () => {
                   <Box sx={{maxWidth: '460px'}}>
                       <Card sx={{borderRadius: '24px'}}>
                         <div className="grid grid-cols-2">
-                          <div className="px-[30px] pt-[15px] pb-[6px] text-[20px] shadow-custom"><RouterLink to="/emp/signup">Employer Sign Up</RouterLink></div>
                           <div className="px-[30px] pt-[15px] pb-[6px] text-[20px]"><RouterLink to="/emp/signin">Employer Sign In</RouterLink></div>
+                          <div className="px-[30px] pt-[15px] pb-[6px] text-[20px] shadow-custom"><RouterLink to="/emp/signup"></RouterLink></div>
+
                         </div>
 
                         <Box sx={{
@@ -105,10 +101,10 @@ const EmpSignin = () => {
                             marginLeft: 5,
                             marginRight: 5,
                         }}>
-                            <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{fontSize: '12.8px'}}>
+                            <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{ marginBottom: '10px', fontSize: '12.8px', color: '#212121' }}>
                                 WELCOME BACK
                             </Typography>
-                            <Typography component="h1" variant="h5" className={classes.titleTxt}>
+                            <Typography component="h1" variant="h5" className={classes.titleTxt} sx={{fontSize: '25px', color: '#212121'}}>
                                 Employer sign in
                             </Typography>
                         </Box>
@@ -172,6 +168,7 @@ const EmpSignin = () => {
                                 <FormControlLabel
                                   control={<Checkbox value="remember" color="primary" />}
                                   label="Remember me"
+                                  sx={{color: '#212121'}}
                                 />
                                 <Typography>
                                   <Link href="#" variant="body2" sx={{fontSize: '16px'}}>
@@ -192,7 +189,7 @@ const EmpSignin = () => {
                               <Box sx={{mt: '48px', mb: '48px'}}>
                                 <Grid container justifyContent="center">
                                   <Grid item>
-                                      New User&nbsp;
+                                      <span className='text-black-1000'>New User&nbsp;</span>
                                       <RouterLink to="/emp/signup" className="custom-link">
                                         SIGN UP HERE
                                       </RouterLink>
@@ -227,10 +224,10 @@ const EmpSignin = () => {
                           marginLeft: 5,
                           marginRight: 5,
                       }}>
-                          <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{fontSize: '12.8px'}}>
+                          <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{fontSize: '12.8px', marginBottom: '10px', color: '#212121'}}>
                               WELCOME BACK
                           </Typography>
-                          <Typography component="h1" variant="h5" className={classes.titleTxt}>
+                          <Typography component="h1" variant="h5" className={classes.titleTxt} style={{fontSize: '25px', color: '#212121'}}>
                               Employer sign in
                           </Typography>
                       </Box>
@@ -294,6 +291,7 @@ const EmpSignin = () => {
                               <FormControlLabel
                                 control={<Checkbox value="remember" color="primary" />}
                                 label="Remember me"
+                                sx={{color: '#212121'}}
                               />
                               <Typography>
                                 <Link href="#" variant="body2" sx={{fontSize: '16px'}}>
@@ -314,7 +312,7 @@ const EmpSignin = () => {
                             <Box sx={{mt: '48px', mb: '48px'}}>
                               <Grid container justifyContent="center">
                                 <Grid item>
-                                    New User&nbsp;
+                                    <span className='text-black-1000'>New User&nbsp;</span>
                                     <RouterLink to="/emp/signup" className="custom-link">
                                       SIGN UP HERE
                                     </RouterLink>
@@ -333,12 +331,23 @@ const EmpSignin = () => {
   } else {
     content = (
       <>
-        <div className="h-screen">
+        <div className="">
+          <Box >
+            <MobileHeader />
+            <div className='mx-[40px] mt-[32px] mb-[30px]'>
+              <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{fontSize: '20px', color: '#212121'}}>
+                  WELCOME BACK
+              </Typography>
+              <Typography component="h1" variant="h5" className={classes.titleTxt} style={{fontSize: '40px', color: '#212121'}}>
+                  Employer sign in
+              </Typography>
+            </div>
+          </Box>
           <div className="flex justify-center h-full">
-            <Box sx={{maxWidth: '460px', margin: 'auto'}}>
+            <Box sx={{width:'100%'}}>
                 <Box  sx={{borderRadius: '24px'}}>
                     <div className="grid grid-cols-2">
-                      <div className="px-[30px] pt-[15px] pb-[6px] text-[20 px] shadow-custom"><RouterLink to="/emp/signup">Employer Sign Up</RouterLink></div>
+                      <div className="px-[30px] pt-[15px] pb-[6px] text-[20px] shadow-custom"><RouterLink to="/emp/signup">Employer Sign Up</RouterLink></div>
                       <div className="px-[30px] pt-[15px] pb-[6px] text-[20px]"><RouterLink to="/emp/signin">Employer Sign In</RouterLink></div>
                     </div>
 
@@ -346,11 +355,12 @@ const EmpSignin = () => {
                         marginTop: 5,
                         marginLeft: 5,
                         marginRight: 5,
+                        padding: '0px 18px'
                     }}>
-                        <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{fontSize: '12.8px'}}>
+                        <Typography component="h1" variant="h5" className={classes.welcomeTxt} sx={{fontSize: '12.8px', color: '#212121'}}>
                             WELCOME BACK
                         </Typography>
-                        <Typography component="h1" variant="h5" className={classes.titleTxt}>
+                        <Typography component="h1" variant="h5" className={classes.titleTxt} style={{fontSize: '35px', color: '#212121'}}>
                             Employer sign in
                         </Typography>
                     </Box>
@@ -429,6 +439,16 @@ const EmpSignin = () => {
                             >
                               CONTINUE
                             </ColorButton>
+                            <Box sx={{mt: '48px', mb: '48px'}}>
+                              <Grid container justifyContent="center">
+                                <Grid item>
+                                    <span className='text-black-1000'>New User&nbsp;</span>
+                                    <RouterLink to="/emp/signup" className="custom-link">
+                                      SIGN UP HERE
+                                    </RouterLink>
+                                </Grid>
+                              </Grid>
+                            </Box>
                         </Box>
                     </Box>
                 </Box >

@@ -62,7 +62,7 @@ export default function CustomTextField(props: any) {
   return (
     <Box>
       <label className="text-black-300 ml-[8px] mb-[10px] text-[14px]" htmlFor={props.id}>{props.label}</label>
-      <Box sx={{mt:'10px'}}>
+      <Box sx={{mt:'7px'}}>
         <CustomInput
             id={props.id}
             placeholder={props.placeholder}

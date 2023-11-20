@@ -82,10 +82,66 @@ const EmpSignup = () => {
   };
 
   return (
-      <>
-          <div className="emp-signup-page"></div>
+      <div>
+        
+          <div className="emp-signup-page">
+            
+          </div>
+          
           <div className="signin-section">
-              <div className="grid grid-cols-2 h-screen">
+            <div className="text-center">
+              <div className="progress-ruler mx-[260px] pt-[22px] relative mt-[52px] mb-[92px]">
+                <div className=" w-[99%] m-auto flex justify-between items-center">
+                  <div className="bg-purple-200 h-[6px] w-[25%]"></div>
+                  <div className="bg-purple-300 h-[6px] w-[25%]"></div>
+                  <div className="bg-purple-300 h-[6px] w-[25%]"></div>
+                  <div className="bg-purple-300 h-[6px] w-[25%]"></div>
+                </div>
+                <div className="dots-part flex justify-between absolute w-full top-[8px]">
+                  <div>
+                    <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center relative">
+                      <span className="text-[14px] font-bold text-white">1</span>
+                    </div>
+                    <div className="absolute -translate-x-[30%] translate-y-[10px] font-bold">
+                    Pick Your Plan
+                    </div>
+                  </div>
+                  <div>
+                    <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-200 flex items-center justify-center relative">
+                      <span className="text-[14px] font-bold text-white">2</span>
+                    </div>
+                    <div className="absolute -translate-x-[31%] translate-y-[10px] font-bold text-[23px]">
+                    Set Up Account
+                    </div>
+                  </div>
+                  <div>
+                    <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-300 flex items-center justify-center">
+                      <span className="text-[14px] font-bold text-white">3</span>
+                    </div>
+                    <div className="absolute -translate-x-[33%] translate-y-[10px] font-bold">
+                    Company Profile
+                    </div>
+                  </div>
+                  <div>
+                    <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-300 flex items-center justify-center">
+                      <span className="text-[14px] font-bold text-white">4</span>
+                    </div>
+                    <div className="absolute -translate-x-[30%] translate-y-[10px] font-bold">
+                    Billing Information
+                    </div>
+                  </div>
+                  <div>
+                    <div className="dot-step-passed w-[34px] h-[34px] rounded-full bg-purple-300 flex items-center justify-center">
+                      <span className="text-[14px] font-bold text-white">5</span>
+                    </div>
+                    <div className="absolute -translate-x-[23%] translate-y-[10px] font-bold whitespace-nowrap">
+                      Post a Job
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div className="grid grid-cols-2 h-[700px]">
                   <div className="flex flex-col justify-center mr-[68px]">
                       <img src={logo} alt="logo" className="pt-[9px] pb-[11px] pl-[263px] pr-[14px] rounded-br-[24.5px] bg-grey-700 mr-[120px]" />
                       <div className="pl-[250px] mt-[5px] text-[39px] text-white">
@@ -220,7 +276,7 @@ const EmpSignup = () => {
                                       variant="contained"
                                       sx={{ mt: 2, mb: 2 , height: '56px'}}
                                     >
-                                      <RouterLink to="/emp/card">CONTINUE</RouterLink>
+                                      <RouterLink to="/create-employer">CONTINUE</RouterLink>
                                     </ColorButton>
                                 </Box>
                             </Box>
@@ -239,7 +295,7 @@ const EmpSignup = () => {
                   </div>
               </div>
           </div>
-      </>
+      </div>
   )
 }
 

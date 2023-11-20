@@ -154,10 +154,10 @@ const CreateUserOne = () => {
         </div>
         <div className="max-w-[740px] mx-auto mt-[21px]">
           <div className="text-[20px] font-bold text-black-300">
-            Personal
+            Languages
           </div>
           <div className="text-grey-800">
-            List all languages that you know including your mother tongue.
+            Select all languages that you know including your mother tongue.
           </div>
           <div className="grid grid-cols-6 gap-4 mt-[12px]">
             <div className="col-span-2">
@@ -173,6 +173,97 @@ const CreateUserOne = () => {
         </div>
         {/* section-pagination */}
         <div className="mt-[50px] text-center pb-[59px]">
+          <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/step2">NEXT &gt;</Link></span>
+        </div>
+      </div>
+    );
+  }else if(isMobile){
+    content = (
+      <div className="bg-[#E8F4FC]">
+        {/* banner */}
+        <div className="create1-mobile-banner bg-[#1273EB] h-[126px] rounded-[8px] flex flex-row item-center">
+          <div className="basis-1/3 p-[13px]">
+            <div className="create1-mobile-banner-spinner w-[100px] h-[100px] flex justify-center items-center"> 
+              <span className="progress-status-text">1 of 5</span>
+            </div>
+          </div>
+          <div className="basis-2/3 flex justify-start items-center">
+            <div className="create1-mobile-banner-title">
+              <h1>Getting to Know You</h1>
+              <h1>Personal</h1>
+            </div>
+          </div>
+        </div>
+        {/* content */}
+        <div className="create1-mobile-content  px-[20px] mt-[15px]">
+          <div className="create1-mobile-content-personal">
+            <div>
+              <h1>Personal</h1>
+              <div className="flex flex-row space-x-4 mt-[10px]">
+                <div className="basis-1/3">
+                  <div>
+                    <StyledSelect label="Salutation/Title" placeholder="None" id="profile-salutation" options={salutations}/>
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledSelect label="Gender" placeholder="None" id="profile-gender" options={genders}/>
+                  </div>
+                  <div  className="mt-[10px]">
+                    <StyledTextField label="Birth Date" placeholder="10/09/1994" id="profile-birthdate"/>
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledTextField label="City" placeholder="Newyork" id="profile-city" />
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledTextField label="State" placeholder="Texas" id="profile-state"/>
+                  </div>
+                </div>
+
+                <div className="basis-2/3">
+                  <div>
+                    <StyledTextField label="First Name" placeholder="Adam" id="profile-firstname"/>
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledTextField label="Last Name" placeholder="Rajmuller" id="profile-lastname"/>
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledTextField label="Cell Phone" placeholder="+84 | 065645645" id="profile-cellphone"/>
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledTextField label="Email" placeholder="rajmuller@gmail.com" id="profile-email"/>
+                  </div>
+                  <div className="mt-[10px]">
+                    <StyledTextField label="Postal/Zip" placeholder="10000" id="profile-postal"/>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div className="mt-[20px]">
+              <h1>
+                Languages
+              </h1>
+              <p className="mt-[10px] text-grey-800 text-[13px] font-[400]">
+                List all languages that you know including your mother tongue.
+              </p>
+              <div className="grid grid-cols-6 gap-4 mt-[12px]">
+                <div className="col-span-2">
+                  <StyledTextField label="Language1" placeholder="English" id="profile-language1" />
+                </div>
+                <div className="col-span-2">
+                  <StyledTextField label="Language2" placeholder="English" id="profile-language2"/>
+                </div>
+                <div className="col-span-2">
+                  <StyledTextField label="Language3" placeholder="English" id="profile-language3"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        {/* section-pagination */}
+        <div className="mt-[24px] text-center pb-[25px]">
           <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
           <span className="text-purple-200 text-[14px]"><Link to="/create-user/step2">NEXT &gt;</Link></span>
         </div>

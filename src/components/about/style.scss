@@ -42,3 +42,172 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+//mobile css
+
+.mobile-banner{
+  background-image: url("../../assets/imgs/about/mobile-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.mobile-banner span{
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}
+
+
+.mobile-banner h1{
+  font-family: Trebuchet MS;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  margin-top: 14px;
+}
+
+.mobile-ourstory{
+  background-image: url("../../assets/imgs/about/mobile-ourstory.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobile-ourstory-part span{
+  margin-top: 28px;
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  width: 159px;
+  height: 32px;
+}
+
+.mobile-ourstory-part h1{
+  margin-top: 28px;
+  font-family: Trebuchet MS;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #707070; 
+}
+
+.setup5-background {
+  background-image: url("../../assets/imgs/about/setup5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.setup6-background {
+  background-image: url("../../assets/imgs/about/setup6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobile-apart-part-title label{
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+
+.mobile-apart-part-title h2{
+  font-family: Trebuchet MS;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #707070;
+}
+
+
+
+.mobile-apart-part-content span{
+  //styleName: Caption/Caption M;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: white;
+}
+
+.mobile-apart-part-content h1{
+  margin-top: 5px;
+  font-family: Trebuchet MS;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+
+}
+
+.mobile-footer-banner{
+  background-image: url("../../assets/imgs/about/mobile-footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobile-footer-banner h1{
+  padding-top: 37px;
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  font-family: Trebuchet MS;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}
+
+.mobile-footer-banner h2{
+  font-family: Trebuchet MS;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}

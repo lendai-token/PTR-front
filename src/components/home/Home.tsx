@@ -71,7 +71,7 @@ const Home = () => {
             </video>
             <div className="video-overlay"></div>
             <div className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-[58px] text-white font-bold w-full">
-              <div className="relative">
+              <div className="relative max-w-[1440px] mx-auto">
                 <div>
                   <p className="italic">DISCOVER YOUR PERFECT JOB</p>
                   <p className="italic">AT THE IDEAL FITNESS FACILITY</p>
@@ -83,31 +83,33 @@ const Home = () => {
             </div>
           </div>
           {/* section activities */}
-          <div className="section-activities bg-grey-400">
-            <div className="pt-[100px] text-[35px]">
-              <span className="text-blue-100 font-bold">Explore&nbsp;</span>
-              <span className="text-black-100 font-bold">activity images on PTRoster</span>
+          {/* <div className="section-activities bg-grey-400">
+            <div className="max-w-[1440px] mx-auto">
+              <div className="pt-[100px] text-[35px]">
+                <span className="text-blue-100 font-bold">Explore&nbsp;</span>
+                <span className="text-black-100 font-bold">activity images on PTRoster</span>
+              </div>
+              <div className="text-black-200 text-[20px] pt-[14px]">
+                Looking for professional part-time, freelance jobs.
+              </div>
+              <div className="pt-[50px] pb-[86px]">
+                <div className="grid grid-rows-3 grid-flow-col gap-4 px-[40px]">
+                  <div className="row-span-2 col-span-2 relative h-full w-full"><img src={activity1} alt="activity1" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity6} alt="activity6" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity7} alt="activity7" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity2} alt="activity2" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity4} alt="activity4" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity8} alt="activity8" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity3} alt="activity3" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity5} alt="activity5" className="object-cover w-full h-full"/></div>
+                  <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity9} alt="activity9" className="object-cover w-full h-full"/></div>
+                </div>            
+              </div>
             </div>
-            <div className="text-black-200 text-[20px] pt-[14px]">
-              Looking for professional part-time, freelance jobs.
-            </div>
-            <div className="pt-[50px] pb-[86px]">
-              <div className="grid grid-rows-3 grid-flow-col gap-4 px-[40px]">
-                <div className="row-span-2 col-span-2 relative h-full w-full"><img src={activity1} alt="activity1" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity6} alt="activity6" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity7} alt="activity7" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity2} alt="activity2" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity4} alt="activity4" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity8} alt="activity8" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity3} alt="activity3" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity5} alt="activity5" className="object-cover w-full h-full"/></div>
-                <div className="row-span-1 col-span-1 relative h-full w-full"><img src={activity9} alt="activity9" className="object-cover w-full h-full"/></div>
-              </div>            
-            </div>
-          </div>
+          </div> */}
         </div>
         {/* section trainers */}
-        <div className="section-trainers bg-white w-full pt-[50px] pb-[62px]">
+        {/* <div className="section-trainers bg-white w-full pt-[50px] pb-[62px] max-w-[1440px] mx-auto">
           <div className="text-[35px] font-bold px-[40px] text-center">
             <span className="text-blue-100">Trainers&nbsp;</span>
             <span className="text-black-100">are full of passion and enthusiasm</span>
@@ -118,16 +120,15 @@ const Home = () => {
           <div className="px-[25px]">
             <TrainerSlider />
           </div>
-        </div>
+        </div> */}
         {/* section coach */}
-        <div className="w-full bg-white">
+        {/* <div className="w-full bg-white max-w-[1440px] mx-auto">
           <div className="text-center font-bold text-[30px]">
             <span className="text-black-100">The smartest choice for&nbsp;</span>
             <span className="text-blue-100">Coaches like you</span>
           </div>
           <div className="text-center pb-[55px] relative">
             <span className="text-[20px] text-black-200">Whether you're looking for sports jobs, you'll find great jobs or coaches here</span>
-            {/* <img src={coachFrame} alt="coach-frame" className="absolute right-[100px] top-[75px]"/> */}
           </div>
           <div className="px-[165px] pb-[78px]">
             <div className="grid grid-cols-2">
@@ -160,11 +161,10 @@ const Home = () => {
               <div className="coach-background"></div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* section icons */}
-        <div className="w-full section-icons-frame pb-[132px] ">
-          {/* <img src={iconsFrame} alt="icons-frame" className="absolute right-[80px] pt-[45px]" /> */}
-          <div className="px-[160px] pt-[80px] pb-[6px]">
+        {/* <div className="w-full section-icons-frame pb-[132px]">
+          <div className="px-[160px] pt-[80px] pb-[6px] max-w-[1440px] mx-auto">
             <div className="grid grid-cols-2">
               <div>
                 <div className="text-white text-[35px]">
@@ -181,9 +181,9 @@ const Home = () => {
               <div className="opportunity-background"></div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* section community */}
-        <div className="w-full bg-white relative">
+        {/* <div className="w-full bg-white relative max-w-[1440px] mx-auto">
           <div className="px-[160px] pt-[80px] pb-[100px]">
             <div className="grid grid-cols-2">
               <div className="community-background"></div>
@@ -205,7 +205,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   } else if (isTablet) {
@@ -313,7 +313,7 @@ const Home = () => {
         <div className="w-full section-icons-frame pb-[132px] ">
           {/* <img src={iconsFrame} alt="icons-frame" className="absolute right-[80px] pt-[45px]" /> */}
           <div className="px-[40px] pt-[80px] pb-[6px]">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-4">
               <div>
                 <div className="text-white text-[35px]">
                   <span>Sign up to find opportunities</span>
@@ -333,7 +333,7 @@ const Home = () => {
         {/* section community */}
         <div className="w-full bg-white relative">
           <div className="px-[40px] pt-[80px] pb-[100px]">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-4">
               <div className="community-background"></div>
               <div>
                 <div className="text-[35px] pb-[19px] font-bold">
@@ -366,7 +366,7 @@ const Home = () => {
               <source src="./banner-movie.mp4" type='video/mp4' />
             </video>
             <div className="video-overlay"></div>
-            <div className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/5 text-[33px] text-white font-bold w-full">
+            <div className="absolute top-[233px] left-2/4 -translate-x-1/2 -translate-y-1/5 text-[33px] text-white font-bold w-full">
               <div className="relative">
                 <div>
                   <p className="italic">DISCOVER YOUR </p>
@@ -376,7 +376,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            <div >
+              <SearchBar/>
+            </div>
           </div>
+          
           <div className="mt-[10px] flex flex-shrink-0 justify-center items-center self-stretch py-2 px-3 h-10 border-2 border-[#0f62fe] bg-[#1273eb]">
             <button className="w-full flex justify-center items-center gap-2.5 py-0 px-4 MS'] text-white font-['Trebuchet text-[1.3125rem] font-bold leading-[2.1875rem]">
               <Link to="/signup">CREATE YOUR PROFILE</Link>

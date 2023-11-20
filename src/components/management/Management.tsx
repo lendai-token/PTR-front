@@ -6,20 +6,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useScreenSize } from "../../app/hooks";
 import { useAppDispatch } from "../../app/hooks";
 import url from "../../app/const/url";
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tab';
+
 
 import "./style.scss";
-import ratingImage from "../../assets/imgs/create-user/rating-image.svg";
-import StyledRatingBar from "../common/StyledRatingBar";
-import { ratings } from "../../app/const/selectOptions";
-import Avatar from '@mui/material/Avatar';
-import Badge from '@mui/material/Badge';
-
-import EmployerImage from "../../assets/imgs/employer/employer-avatar.svg";
-import edit from "../../assets/imgs/employer/edit.svg";
-import StyledTextField from "../common/StyledTextField";
-import StyledTextArea from "../common/StyledTextArea";
-import StyledButton from "../common/StyledButton";
-
 const Management = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -116,6 +107,12 @@ const Management = () => {
           </div>
         </div>
       </div>
+    );
+  }else if(isMobile){
+    content = (
+      <div>
+                              
+    </div>
     );
   }
   return <>{content}</>;

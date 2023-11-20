@@ -199,6 +199,117 @@ const CreateUserThree = () => {
         </div>
       </div>
     );
+  }else if(isMobile){
+    content = (
+      <div className="bg-[#E8F4FC]">
+        {/* banner */}
+        <div className="create2-mobile-banner bg-[#1273EB] h-[126px] rounded-[8px] flex flex-row item-center">
+          <div className="basis-1/3 p-[13px]">
+            <div className="create1-mobile-banner-spinner2 w-[100px] h-[100px] flex justify-center items-center"> 
+              <span className="progress-status-text">3 of 5</span>
+            </div>
+          </div>
+          <div className="basis-2/3 flex justify-start items-center">
+            <div className="create1-mobile-banner-title">
+              <h1>Getting to Know You</h1>
+              <h2>Opportunities</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* content */}
+        <div className="px-[20px] mt-[12px]">
+          <div className="create3-mobile-content-positions">
+            <div className="text-[20px] font-bold text-black-300">
+              Positions
+            </div>
+            <div className="text-[14px] text-grey-800">
+              Select the positions you would like to be considered for. - Pick up to five (5)
+            </div>
+            <div className="mt-[16px]">
+              {
+                positions.map((item) => {
+                  return (
+                    <div className="mt-[6px]">
+                      <StyledButton text={item.text} status={item.status} />
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+          
+          <div className="create3-mobile-content-levels mt-[28px]">
+            <div className="text-[20px] font-bold text-black-300">
+              Levels
+            </div>
+            <div className="text-[14px] text-grey-800">
+              Select the level of work you are looking for. <br/>Pick up to three (3)
+            </div>
+            <div className="grid grid-cols-6 gap-4 mt-[4px]">
+              <div className="col-span-2">
+                <StyledButton text="Full Time" status="normal" />
+              </div>
+              <div className="col-span-2">
+                <StyledButton text="Part Time" status="normal" />
+              </div>
+              <div className="col-span-2">
+                <StyledButton text="Contract" status="normal" />
+              </div>
+            </div>
+          </div>
+          
+          <div className="create3-mobile-content-levels mt-[26px]">
+            <div className="text-[20px] font-bold text-black-300">
+              Reloction
+            </div>
+            <div className="text-[14px] text-grey-800">
+              Are you willing to relocate for the right job?
+            </div>
+            <div className="grid grid-cols-6 gap-4 mt-[7px]">
+              <div className="col-span-3">
+                <StyledButton text="Yes" status="active" />
+              </div>
+              <div className="col-span-3">
+                <StyledButton text="No" status="normal" />
+              </div>
+            </div>
+          </div>
+
+          <div className="create3-mobile-content-levels mt-[26px]">
+            <div className="text-[20px] font-bold text-black-300">
+              If yes, where would you relocate 
+  for the ideal job?
+            </div>
+            <div className="grid grid-cols-6 gap-1 mt-[7px]">
+              <div className="col-span-3">
+                <StyledTextField label="State 1" placeholder="Pick a state" id="profile-state1"/>
+              </div>
+              <div className="col-span-3">
+                <StyledTextField label="City 1" placeholder="Pick a city" id="profile-city1"/>
+              </div>
+              <div className="col-span-3">
+                <StyledTextField label="State 2" placeholder="Pick a state" id="profile-state2"/>
+              </div>
+              <div className="col-span-3">
+                <StyledTextField label="City 2" placeholder="Pick a city" id="profile-city2"/>
+              </div>
+              <div className="col-span-3">
+                <StyledTextField label="State 3" placeholder="Pick a state" id="profile-state3"/>
+              </div>
+              <div className="col-span-3">
+                <StyledTextField label="City 3" placeholder="Pick a city" id="profile-city3"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* section-pagination */}
+        <div className="mt-[24px] text-center pb-[25px]">
+          <span className="text-grey-800 text-[14px]">&lt; PREVIOUS /</span>
+          <span className="text-purple-200 text-[14px]"><Link to="/create-user/step4">NEXT &gt;</Link></span>
+        </div>
+      </div>
+    );
   }
   return <>{content}</>;
 };

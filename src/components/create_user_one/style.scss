@@ -6,3 +6,51 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+//mobile css
+.create1-mobile-banner-spinner{
+  background-image: url('../../assets/imgs/create-user/spinner1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.progress-status-text{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.create1-mobile-banner-title h1{
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: start;
+  color: white;
+  padding: 6px;
+}
+
+.create1-mobile-content-personal h1{
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+}
+
+.create1-mobile-banner-title h2{
+  font-family: Trebuchet MS;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  color: white;
+  padding: 6px;
+}

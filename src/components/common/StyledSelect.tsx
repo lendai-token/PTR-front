@@ -16,7 +16,7 @@ export default function StyledSelect(props:any) {
           </Box>
         )
       }
-      <Box sx={{mt:'10px', width:'100%'}}>
+      <Box sx={{mt:'7px', width:'100%'}}>
         <CustomSelect renderValue={renderValue} placeholder={props.placeholder} id={props.id}>
           {props.options.map((item: any) => 
             <StyledOption value={item.value}>{item.text}</StyledOption>
